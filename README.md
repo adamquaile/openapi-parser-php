@@ -16,12 +16,13 @@ This library is not yet at version 1.0, so all of the following may change at an
 
 #### PHP Version Support
 
-This library aims to support [any PHP version that is not End of life](https://www.php.net/supported-versions.php). 
+This library aims to support [any PHP version under active support](https://www.php.net/supported-versions.php) and 
+any versions that are not end-of life where possible. 
 Support for new versions may require a new major version, at which point EOL versions will be dropped.
 
 | OpenAPI Parser Version | PHP 7 | PHP 8.0 | PHP 8.1 | PHP 8.2 | PHP 8.3 | PHP 8.4 |
 |------------------------|-------|---------|---------|---------|---------|---------|
-| 0.x                    | ❌     | ❌     | ✅      | ✅      | ✅      | ✅      |
+| 0.x                    | ❌     | ❌     | ❌      | ✅      | ✅      | ✅      |
 
 #### OpenAPI Version Support
 
