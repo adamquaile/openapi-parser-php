@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Worq\OpenApiParser\Exceptions;
+
+use Exception;
+
+final class InvalidOpenApiDocument extends Exception
+{
+    /**
+     * @param OpenApiValidationError[] $errors
+     */
+    public function __construct(
+        private array $errors
+    ) {
+        parent::__construct(
+            implode(
+                '. ',
+                array_map(fn (OpenApiValidationError $e) => $e->getMessage(), $errors)
+            )
+        );
+    }
+}

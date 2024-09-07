@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Worq\OpenApiParser\Model;
+
+final readonly class InfoObject
+{
+    public function __construct(
+        public string $title,
+        public string $version,
+        public ?string $summary = null,
+        public ?string $description = null,
+        public ?string $termsOfService = null,
+        public ?ContactObject $contact = null,
+        public ?LicenseObject $license = null,
+    ) {
+
+    }
+}
