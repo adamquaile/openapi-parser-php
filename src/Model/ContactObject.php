@@ -7,9 +7,9 @@ namespace Worq\OpenApiParser\Model;
 final readonly class ContactObject
 {
     public function __construct(
-        public string $name,
-        public ?string $url,
-        public ?string $email,
+        public ?string $name = null,
+        public ?string $url = null,
+        public ?string $email = null,
     ) {
     }
 }
