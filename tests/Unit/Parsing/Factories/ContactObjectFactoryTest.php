@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use Worq\OpenApiParser\Model\ContactObject;
 use Worq\OpenApiParser\Model\Version;
 use Worq\OpenApiParser\Parsing\Factories\ContactObjectFactory;
+use Worq\OpenApiParser\Tests\Support\ObjectFactoryTest;
 
 #[CoversClass(ContactObjectFactory::class)]
 #[CoversClass(ContactObject::class)]
