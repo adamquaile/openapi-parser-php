@@ -60,11 +60,13 @@ final class OpenApiObjectFactoryTest extends TestCase
                 ],
                 'paths' => [],
                 'components' => [
-                    'NotFound' => [
-                        'description' => 'Not found',
-                        'content' => [
-                            'text/plain' => [
-                                'example' => 'Not found',
+                    'responses' => [
+                        'NotFound' => [
+                            'description' => 'Not found',
+                            'content' => [
+                                'text/plain' => [
+                                    'example' => 'Not found',
+                                ],
                             ],
                         ],
                     ],
@@ -73,7 +75,6 @@ final class OpenApiObjectFactoryTest extends TestCase
             new ParseContext(Version::V3_0, $this->factory)
         );
 
-//        var_dump($openApi->components);
         $this->assertEquals(
             'Not found',
             $openApi->components->responses['NotFound']->content['text/plain']->example

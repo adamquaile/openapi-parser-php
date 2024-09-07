@@ -13,7 +13,9 @@ final class MediaTypeObjectFactory implements MediaTypeObjectFactoryInterface
     public function create(array $data, ParseContext $context): MediaTypeObject
     {
         return new MediaTypeObject(
-            schema: $context->factory->create(SchemaObject::class, $data['schema'], $context),
+            schema: array_key_exists('schema', $data)
+                ? $context->factory->create(SchemaObject::class, $data['schema'], $context)
+                : null,
             example: $data['example'] ?? null,
         );
     }
