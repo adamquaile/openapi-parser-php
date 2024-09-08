@@ -37,7 +37,7 @@ Support for new versions may require a new major version, at which point EOL ver
 | OpenAPI Object                | ❌      |       |
 | Info Object                   | ❌      |       |
 | Contact Object                | ✅      | [^1]  |
-| License Object                | ❌      |       |
+| License Object                | ✅      | [^1]  |
 | Server Object                 | ❌      |       |
 | Server Variable Object        | ❌      |       |
 | Components Object             | ❌      |       |
