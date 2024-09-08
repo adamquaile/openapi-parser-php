@@ -35,7 +35,7 @@ Support for new versions may require a new major version, at which point EOL ver
 | Feature                       | Support | Notes |
 |-------------------------------|---------|-------|
 | OpenAPI Object                | ❌      |       |
-| Info Object                   | ❌      |       |
+| Info Object                   | ✅      | [^1]  |
 | Contact Object                | ✅      | [^1]  |
 | License Object                | ✅      | [^1]  |
 | Server Object                 | ❌      |       |
