@@ -32,9 +32,33 @@ Support for new versions may require a new major version, at which point EOL ver
 
 #### OpenAPI Object Support (How complete is this library)
 
-| Feature           | Support | Notes |
-|-------------------|---------| ----- |
-| Contact Object    | ✅      | [^1] |
+| Feature                       | Support | Notes |
+|-------------------------------|---------|-------|
+| OpenAPI Object                | ❌      |       |
+| Info Object                   | ❌      |       |
+| Contact Object                | ✅      | [^1]  |
+| License Object                | ❌      |       |
+| Server Object                 | ❌      |       |
+| Server Variable Object        | ❌      |       |
+| Components Object             | ❌      |       |
+| Paths Object                  | ❌      |       |
+| Path Item Object              | ❌      |       |
+| Operation Object              | ❌      |       |
+| External Documentation Object | ❌      |       |
+| Request Body Object           | ❌      |       |
+| Media Type Object             | ❌      |       |
+| Encoding Object               | ❌      |       |
+| Responses Object              | ❌      |       |
+| Callback Object               | ❌      |       |
+| Example Object                | ❌      |       |
+| Link Object                   | ❌      |       |
+| Header Object                 | ❌      |       |
+| Tag Object                    | ❌      |       |
+| Reference Object              | ❌      |       |
+| Schema Object                 | ❌      |       |
+| Discriminator Object          | ❌      |       |
+| XML Object                    | ❌      |       |
+| Security Scheme Object        | ❌      |       |
 
 [^1]: Specification Extensions support missing
 
