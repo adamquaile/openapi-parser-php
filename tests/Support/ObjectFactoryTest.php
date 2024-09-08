@@ -6,6 +6,7 @@ namespace Worq\OpenApiParser\Tests\Support;
 
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\MockObject\MockObject;
 use Worq\OpenApiParser\Model\Version;
 use Worq\OpenApiParser\Parsing\Factory;
 use Worq\OpenApiParser\Parsing\ParseContext;
@@ -24,6 +25,10 @@ trait ObjectFactoryTest
         $this->factory = new $factoryClass();
     }
 
+    public function setupPreconditions(Factory&MockObject $factory): void
+    {
+    }
+
     /**
      * @return iterable<array-key, array{data: mixed, expected: object}>
      */
@@ -38,9 +43,11 @@ trait ObjectFactoryTest
     #[DataProvider('examples')]
     public function testExamples(Version $version, mixed $data, object $expected): void
     {
+        $factory = $this->createMock(Factory::class);
+        $this->setupPreconditions($factory);
         $this->assertEquals(
             $expected,
-            $this->factory->create($data, new ParseContext(version: $version, factory: $this->createMock(Factory::class)))
+            $this->factory->create($data, new ParseContext(version: $version, factory: $factory))
         );
     }
 
