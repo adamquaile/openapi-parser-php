@@ -12,7 +12,7 @@ final class InvalidOpenApiDocument extends Exception
      * @param OpenApiValidationError[] $errors
      */
     public function __construct(
-        private array $errors
+        array $errors
     ) {
         parent::__construct(
             implode(
