@@ -16,6 +16,8 @@ use Worq\OpenApiParser\Parsing\DocumentPath;
 #[CoversClass(OpenApiParser::class)]
 final class OpenApiParserTest extends TestCase
 {
+    private OpenApiParser $parser;
+
     protected function setUp(): void
     {
         $this->parser = new OpenApiParser();

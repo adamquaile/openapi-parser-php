@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Worq\OpenApiParser\Model;
 
 /**
- * @implements MapTrait<MediaTypeObject>
+ * @implements MapInterface<MediaTypeObject>
  */
-final class MediaTypeObjectMap implements \IteratorAggregate, \ArrayAccess
+final class MediaTypeObjectMap implements MapInterface
 {
     use MapTrait;
 

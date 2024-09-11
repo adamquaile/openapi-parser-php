@@ -7,9 +7,9 @@ namespace Worq\OpenApiParser\Model;
 use Traversable;
 
 /**
- * @implements MapTrait<PathItemObject>
+ * @implements MapInterface<PathItemObject>
  */
-final class PathsObject implements \IteratorAggregate, \ArrayAccess
+final class PathsObject implements MapInterface
 {
     use MapTrait;
 

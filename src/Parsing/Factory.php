@@ -22,7 +22,7 @@ readonly class Factory
     }
 
     /**
-     * @template T
+     * @template T of object
      * @param class-string<T> $object
      * @param array $data
      * @param ParseContext $context
