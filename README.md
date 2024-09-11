@@ -39,7 +39,7 @@ Support for new versions may require a new major version, at which point EOL ver
 | Contact Object                | ✅      | [^1]  |
 | License Object                | ✅      | [^1]  |
 | Server Object                 | ❌      |       |
-| Server Variable Object        | ❌      |       |
+| Server Variable Object        | ✅      | [^1]  |
 | Components Object             | ❌      |       |
 | Paths Object                  | ❌      |       |
 | Path Item Object              | ❌      |       |
