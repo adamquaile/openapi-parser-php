@@ -30,9 +30,18 @@ Support for new versions may require a new major version, at which point EOL ver
 |------------------------|---------------|---------------|---------------|
 | 0.x                    | ❌            | ✅            | ✅            |
 
-#### OpenAPI Object Support (How complete is this library)
+#### OpenAPI Feature Support (How complete is this library)
 
-| Feature                       | Support | Notes |
+| Feature                   | Support | Notes |
+|---------------------------|---------|-------|
+| Specification Extensions  | ❌      |       |
+| Parsing from YAML         | ❌      |       |
+| Parsing from JSON         | ❌      |       |
+| Resolving $ref references | ❌      |       |
+| Validation                | ❌      |       |
+
+
+| Object                        | Support | Notes |
 |-------------------------------|---------|-------|
 | OpenAPI Object                | ❌      |       |
 | Info Object                   | ✅      | [^1]  |
