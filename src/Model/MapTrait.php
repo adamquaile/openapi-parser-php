@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace Worq\OpenApiParser\Model;
 
 /**
- * @mixin \IteratorAggregate
- * @mixin \ArrayAccess
- * @template MappedItem
+ * @mixin MapInterface
+ * @template MappedItem of object
  */
 trait MapTrait
 {

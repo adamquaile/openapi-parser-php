@@ -2,6 +2,19 @@ name: tests
 on:
   - pull_request
 jobs:
+  linting:
+    name: Run linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+            php-version: '8.3'
+            tools: composer:v2
+
+      - run: composer install --dev
+      - run: ./vendor/bin/phpstan analyse --error-format=github
+
   unit_tests:
     name: PHP ${{ matrix.php-versions }}
     runs-on: ubuntu-latest
