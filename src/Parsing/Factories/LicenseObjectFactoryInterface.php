@@ -9,5 +9,5 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 interface LicenseObjectFactoryInterface
 {
-    public function create(mixed $data, ParseContext $context): LicenseObject;
+    public function create(object $data, ParseContext $context): LicenseObject;
 }

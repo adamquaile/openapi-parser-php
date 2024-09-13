@@ -12,18 +12,20 @@ use Worq\OpenApiParser\Model\Version;
 use Worq\OpenApiParser\Parsing\Factories\InfoObjectFactory;
 use Worq\OpenApiParser\Parsing\Factory;
 use Worq\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use Worq\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(InfoObject::class)]
 #[CoversClass(InfoObjectFactory::class)]
 class InfoObjectFactoryTest extends TestCase
 {
     use ObjectFactoryTest;
+    use SpecificationExtensionsObjectFactoryTest;
 
     protected function setupPreconditions(Factory&MockObject $factory): void
     {
         $factory
             ->method('create')
-            ->willReturnCallback(fn (string $class) => match ($class) {
+            ->willReturnCallback(fn (string $class, ?object $data) => is_null($data) ? null : match ($class) {
                 ContactObject::class => new ContactObject(
                     name: 'API Support',
                     url: 'https://www.example.com/support',
@@ -40,7 +42,7 @@ class InfoObjectFactoryTest extends TestCase
     {
         yield 'minimal example @3.0' => [
             'version' => Version::V3_0,
-            'data' => [
+            'data' => (object) [
                 'title' => 'Minimal API',
                 'version' => '1.0.0',
             ],
@@ -52,13 +54,13 @@ class InfoObjectFactoryTest extends TestCase
 
         yield 'spec example @3.1' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'title' => 'Sample Pet Store App',
                 'summary' => 'A pet store manager.',
                 'description' => 'This is a sample server for a pet store.',
                 'termsOfService' => 'https://example.com/terms/',
-                'contact' => [],
-                'license' => [],
+                'contact' => (object) [],
+                'license' => (object) [],
                 'version' => '1.0.1',
             ],
             'expected' => new InfoObject(
@@ -81,7 +83,7 @@ class InfoObjectFactoryTest extends TestCase
 
         yield 'summary ignored in @3.0' => [
             'version' => Version::V3_0,
-            'data' => [
+            'data' => (object) [
                 'title' => 'Sample Pet Store App',
                 'summary' => 'A pet store manager.',
                 'version' => '1.0.1',
@@ -94,12 +96,12 @@ class InfoObjectFactoryTest extends TestCase
 
         yield 'spec example @3.0' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'title' => 'Sample Pet Store App',
                 'description' => 'This is a sample server for a pet store.',
                 'termsOfService' => 'https://example.com/terms/',
-                'contact' => [],
-                'license' => [],
+                'contact' => (object) [],
+                'license' => (object) [],
                 'version' => '1.0.1',
             ],
             'expected' => new InfoObject(

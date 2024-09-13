@@ -24,12 +24,15 @@ readonly class Factory
     /**
      * @template T of object
      * @param class-string<T> $object
-     * @param array $data
      * @param ParseContext $context
-     * @return T
+     * @return ?T
      */
-    public function create(string $object, array $data, ParseContext $context): object
+    public function create(string $object, ?object $data, ParseContext $context): ?object
     {
+        if (is_null($data)) {
+            return null;
+        }
+
         $short = (new \ReflectionClass($object))->getShortName();
         $defaultFactoryInterface = 'Worq\\OpenApiParser\\Parsing\\Factories\\' . $short . 'FactoryInterface';
 

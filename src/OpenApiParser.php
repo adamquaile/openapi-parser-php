@@ -23,9 +23,9 @@ final readonly class OpenApiParser
     }
     public function parseYamlString(string $yaml): OpenApiObject
     {
-        $yaml = (new Yaml())->parse($yaml) ?? [];
+        $yaml = (new Yaml())->parse($yaml, flags: Yaml::PARSE_OBJECT_FOR_MAP) ?? [];
 
-        if (!array_key_exists('openapi', $yaml)) {
+        if (!isset($yaml->openapi)) {
 
             throw new InvalidOpenApiDocument([
                 new OpenApiValidationError(
@@ -36,7 +36,7 @@ final readonly class OpenApiParser
         }
 
         $context = new ParseContext(
-            version: Version::fromString($yaml['openapi']),
+            version: Version::fromString($yaml->openapi),
             factory: $this->factory,
             path: new DocumentPath(),
         );

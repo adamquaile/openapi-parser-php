@@ -9,5 +9,5 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 interface ContactObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): ContactObject;
+    public function create(object $data, ParseContext $context): ContactObject;
 }

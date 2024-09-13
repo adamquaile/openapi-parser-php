@@ -12,5 +12,5 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 interface PathItemObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): PathItemObject;
+    public function create(object $data, ParseContext $context): PathItemObject;
 }

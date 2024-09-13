@@ -10,13 +10,11 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class ResponseObjectFactory implements ResponseObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): ResponseObject
+    public function create(object $data, ParseContext $context): ResponseObject
     {
         return new ResponseObject(
-            description: $data['description'],
-            content: array_key_exists('content', $data)
-                ? $context->factory->create(MediaTypeObjectMap::class, $data['content'], $context)
-                : null,
+            description: $data->description,
+            content: $context->factory->create(MediaTypeObjectMap::class, $data->content ?? null, $context),
         );
     }
 }

@@ -34,8 +34,8 @@ Support for new versions may require a new major version, at which point EOL ver
 
 | Feature                   | Support | Notes |
 |---------------------------|---------|-------|
-| Specification Extensions  | ❌      |       |
-| Parsing from YAML         | ❌      |       |
+| Specification Extensions  | ✅      |       |
+| Parsing from YAML         | ✅      |       |
 | Parsing from JSON         | ❌      |       |
 | Resolving $ref references | ❌      |       |
 | Validation                | ❌      |       |
@@ -44,8 +44,8 @@ Support for new versions may require a new major version, at which point EOL ver
 | Object                        | Support | Notes |
 |-------------------------------|---------|-------|
 | OpenAPI Object                | ❌      |       |
-| Info Object                   | ✅      | [^1]  |
-| Contact Object                | ✅      | [^1]  |
+| Info Object                   | ✅      |       |
+| Contact Object                | ✅      |       |
 | License Object                | ✅      | [^1]  |
 | Server Object                 | ❌      |       |
 | Server Variable Object        | ✅      | [^1]  |

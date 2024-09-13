@@ -1,0 +1,10 @@
+openapi: '3.1.0'
+info:
+  title: 'Specification Extensions Example'
+  version: '1.0.0'
+  x-internal-id: '1234'
+  contact:
+    x-socials:
+      github: 'github-username'
+      linkedin: 'linkedin-username'
+paths: {}

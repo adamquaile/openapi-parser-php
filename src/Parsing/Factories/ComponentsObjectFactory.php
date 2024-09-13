@@ -11,15 +11,11 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class ComponentsObjectFactory
 {
-    public function create(array $data, ParseContext $context): ComponentsObject
+    public function create(object $data, ParseContext $context): ComponentsObject
     {
         return new ComponentsObject(
-            schemas: array_key_exists('schemas', $data)
-                ? $context->factory->create(SchemasObject::class, $data['schemas'], $context)
-                : null,
-            responses: array_key_exists('responses', $data)
-                ? $context->factory->create(ResponsesObject::class, $data['responses'], $context)
-                : null,
+            schemas: $context->factory->create(SchemasObject::class, $data->schemas ?? null, $context),
+            responses: $context->factory->create(ResponsesObject::class, $data->responses ?? null, $context),
         );
     }
 }

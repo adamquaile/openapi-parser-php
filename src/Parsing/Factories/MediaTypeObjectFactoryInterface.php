@@ -9,5 +9,5 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 interface MediaTypeObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): MediaTypeObject;
+    public function create(object $data, ParseContext $context): MediaTypeObject;
 }

@@ -13,12 +13,10 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class PathItemObjectFactory implements PathItemObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): PathItemObject
+    public function create(object $data, ParseContext $context): PathItemObject
     {
         return new PathItemObject(
-            get: array_key_exists('get', $data)
-                ? $context->factory->create(OperationObject::class, $data['get'], $context)
-                : null,
+            get: $context->factory->create(OperationObject::class, $data->get ?? null, $context),
         );
     }
 }

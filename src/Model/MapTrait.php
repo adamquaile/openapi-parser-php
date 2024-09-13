@@ -11,21 +11,32 @@ namespace Worq\OpenApiParser\Model;
 trait MapTrait
 {
     /**
+     * @param string $offset
+     * @return MappedItem
+     */
+    public function __get(string $offset): ?object
+    {
+        return $this->items->$offset ?? null;
+    }
+
+    /**
      * @return \Traversable<MappedItem>
      */
     public function getIterator(): \Traversable
     {
-        return new \ArrayIterator($this->items);
+        foreach ($this->items as $key => $item) {
+            yield $key => $item;
+        }
     }
 
     public function offsetExists(mixed $offset): bool
     {
-        return array_key_exists($offset, $this->items);
+        return isset($this->items->$offset);
     }
 
     public function offsetGet(mixed $offset): mixed
     {
-        return $this->items[$offset];
+        return $this->items->$offset;
     }
 
     public function offsetSet(mixed $offset, mixed $value): void
@@ -39,11 +50,11 @@ trait MapTrait
     }
 
     /**
-     * @param string $name
+     * @param string $offset
      * @return ?MappedItem
      */
-    public function entryNamed(string $name): ?object
+    public function entryNamed(string $offset): ?object
     {
-        return $this->items[$name] ?? null;
+        return $this->items->$offset ?? null;
     }
 }

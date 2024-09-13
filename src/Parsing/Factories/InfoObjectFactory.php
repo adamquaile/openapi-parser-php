@@ -13,24 +13,23 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class InfoObjectFactory implements InfoObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): InfoObject
+    use SpecificationExtensionFactoryTrait;
+
+    public function create(object $data, ParseContext $context): InfoObject
     {
         if ($context->version == Version::V3_0) {
-            unset($data['summary']);
+            unset($data->summary);
         }
 
         return new InfoObject(
-            title: $data['title'],
-            version: $data['version'],
-            summary: $data['summary'] ?? null,
-            description: $data['description'] ?? null,
-            termsOfService: $data['termsOfService'] ?? null,
-            contact: array_key_exists('contact', $data)
-                ? $context->factory->create(ContactObject::class, $data['contact'], $context)
-                : null,
-            license: array_key_exists('license', $data)
-                ? $context->factory->create(LicenseObject::class, $data['license'], $context)
-                : null,
+            title: $data->title,
+            version: $data->version,
+            summary: $data->summary ?? null,
+            description: $data->description ?? null,
+            termsOfService: $data->termsOfService ?? null,
+            contact: $context->factory->create(ContactObject::class, $data->contact ?? null, $context),
+            license: $context->factory->create(LicenseObject::class, $data->license ?? null, $context),
+            x: $this->parsedExtensionObject($data),
         );
     }
 }

@@ -11,10 +11,10 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class OperationObjectFactory
 {
-    public function create(array $data, ParseContext $context): OperationObject
+    public function create(object $data, ParseContext $context): OperationObject
     {
         return new OperationObject(
-            operationId: $data['operationId'] ?? null,
+            operationId: $data->operationId ?? null,
         );
     }
 }

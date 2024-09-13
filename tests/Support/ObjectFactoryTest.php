@@ -7,11 +7,15 @@ namespace Worq\OpenApiParser\Tests\Support;
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
 use Worq\OpenApiParser\Model\Version;
 use Worq\OpenApiParser\Parsing\Factory;
 use Worq\OpenApiParser\Parsing\ParseContext;
 
 
+/**
+ * @mixin TestCase
+ */
 trait ObjectFactoryTest
 {
     private $factory;
@@ -41,7 +45,7 @@ trait ObjectFactoryTest
     }
 
     #[DataProvider('examples')]
-    public function testExamples(Version $version, mixed $data, object $expected): void
+    public function testExamples(Version $version, object $data, object $expected): void
     {
         $factory = $this->createMock(Factory::class);
         $this->setupPreconditions($factory);
@@ -50,5 +54,4 @@ trait ObjectFactoryTest
             $this->factory->create($data, new ParseContext(version: $version, factory: $factory))
         );
     }
-
 }

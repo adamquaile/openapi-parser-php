@@ -21,7 +21,7 @@ final class ServerVariableObjectFactoryTest extends TestCase
     {
         yield 'minimal with default only @3.1' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'default' => 'production',
             ],
             'expected' => new ServerVariableObject(
@@ -31,7 +31,7 @@ final class ServerVariableObjectFactoryTest extends TestCase
 
         yield 'full example @3.1' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'default' => 'production',
                 'description' => 'Deployment environment',
                 'enum' => ['production', 'staging'],
