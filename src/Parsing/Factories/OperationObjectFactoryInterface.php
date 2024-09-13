@@ -11,5 +11,5 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 interface OperationObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): OperationObject;
+    public function create(object $data, ParseContext $context): OperationObject;
 }

@@ -10,13 +10,13 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class MediaTypeObjectMapFactory implements MediaTypeObjectMapFactoryInterface
 {
-    public function create(array $data, ParseContext $context): MediaTypeObjectMap
+    public function create(object $data, ParseContext $context): MediaTypeObjectMap
     {
-        return new MediaTypeObjectMap(
-            array_map(
-                fn ($mediaType) => $context->factory->create(MediaTypeObject::class, $mediaType, $context),
-                $data,
-            ),
+        array_walk(
+            $data,
+            fn ($mediaType) => $context->factory->create(MediaTypeObject::class, $mediaType, $context),
         );
+
+        return new MediaTypeObjectMap(items: $data);
     }
 }

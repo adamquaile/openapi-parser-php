@@ -12,13 +12,12 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class PathsObjectFactory implements PathsObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): PathsObject
+    public function create(object $data, ParseContext $context): PathsObject
     {
-        return new PathsObject(
-            items: array_map(
-                fn (array $response) => $context->factory->create(PathItemObject::class, $response, $context),
-                $data
-            )
+        array_walk(
+            $data,
+            fn (object $response) => $context->factory->create(PathItemObject::class, $response, $context),
         );
+        return new PathsObject($data);
     }
 }

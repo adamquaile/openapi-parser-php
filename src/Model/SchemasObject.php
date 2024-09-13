@@ -6,16 +6,13 @@ namespace Worq\OpenApiParser\Model;
 
 use Traversable;
 
-final class SchemasObject implements \IteratorAggregate
+final class SchemasObject implements MapInterface
 {
-    public function __construct(
-        /** @var array<string, SchemaObject> */
-        public array $schemas
-    ) {
-    }
+    use MapTrait;
 
-    public function getIterator(): Traversable
-    {
-        return new \ArrayIterator($this->schemas);
+    public function __construct(
+        /** @var \Traversable<string, SchemaObject> */
+        public object $items
+    ) {
     }
 }

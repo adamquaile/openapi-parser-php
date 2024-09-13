@@ -9,5 +9,5 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 interface SchemasObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): SchemasObject;
+    public function create(object $data, ParseContext $context): SchemasObject;
 }

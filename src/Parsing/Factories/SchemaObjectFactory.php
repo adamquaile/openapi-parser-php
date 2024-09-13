@@ -9,7 +9,7 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class SchemaObjectFactory implements SchemaObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): SchemaObject
+    public function create(object $data, ParseContext $context): SchemaObject
     {
         return new SchemaObject();
     }

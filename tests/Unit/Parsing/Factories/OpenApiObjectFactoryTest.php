@@ -38,9 +38,9 @@ final class OpenApiObjectFactoryTest extends TestCase
             )
         );
         $this->objectFactory->create(
-            [
+            (object) [
                 'openapi' => '3.0.0',
-                'info' => [
+                'info' => (object) [
                     'title' => 'Minimal API',
                     'version' => '1.0.0',
                 ],
@@ -52,19 +52,19 @@ final class OpenApiObjectFactoryTest extends TestCase
     public function testComponents(): void
     {
         $openApi = $this->objectFactory->create(
-            [
+            (object) [
                 'openapi' => '3.0.0',
-                'info' => [
+                'info' => (object) [
                     'title' => 'Minimal API',
                     'version' => '1.0.0',
                 ],
-                'paths' => [],
-                'components' => [
-                    'responses' => [
-                        'NotFound' => [
+                'paths' => (object) [],
+                'components' => (object) [
+                    'responses' => (object) [
+                        'NotFound' => (object) [
                             'description' => 'Not found',
-                            'content' => [
-                                'text/plain' => [
+                            'content' => (object) [
+                                'text/plain' => (object) [
                                     'example' => 'Not found',
                                 ],
                             ],
@@ -77,22 +77,22 @@ final class OpenApiObjectFactoryTest extends TestCase
 
         $this->assertEquals(
             'Not found',
-            $openApi->components->responses['NotFound']->content['text/plain']->example
+            $openApi->components->responses->NotFound->content->{'text/plain'}->example
         );
     }
 
     public function testPaths(): void
     {
         $openApi = $this->objectFactory->create(
-            [
+            (object) [
                 'openapi' => '3.0.0',
-                'info' => [
+                'info' => (object) [
                     'title' => 'Minimal API',
                     'version' => '1.0.0',
                 ],
-                'paths' => [
-                    '/' => [
-                        'get' => [
+                'paths' => (object) [
+                    '/' => (object) [
+                        'get' => (object) [
                             'operationId' => 'index',
                         ],
                     ],

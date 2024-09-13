@@ -12,8 +12,8 @@ final class PathsObject implements MapInterface
     use MapTrait;
 
     public function __construct(
-        /** @var array<string, PathItemObject> */
-        public array $items
+        /** @var \Traversable<string, PathItemObject> */
+        public object $items
     ) {
     }
 }

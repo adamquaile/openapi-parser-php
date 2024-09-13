@@ -18,7 +18,7 @@ class LicenseObjectFactoryTest extends TestCase
     {
         yield 'minimal @3.1' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'name' => 'Apache 2.0',
             ],
             'expected' => new LicenseObject(name: 'Apache 2.0')
@@ -26,7 +26,7 @@ class LicenseObjectFactoryTest extends TestCase
 
         yield 'complete @3.0' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'name' => 'Apache 2.0',
                 'url' => 'https://www.apache.org/licenses/LICENSE-2.0.html',
             ],
@@ -38,7 +38,7 @@ class LicenseObjectFactoryTest extends TestCase
 
         yield 'extra unused identifier not specified in @3.0' => [
             'version' => Version::V3_0,
-            'data' => [
+            'data' => (object) [
                 'name' => 'Apache 2.0',
                 'identifier' => 'Apache-2.0',
                 'url' => 'https://www.apache.org/licenses/LICENSE-2.0.html',
@@ -51,7 +51,7 @@ class LicenseObjectFactoryTest extends TestCase
 
         yield 'complete with url @3.1' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'name' => 'Apache 2.0',
                 'url' => 'https://www.apache.org/licenses/LICENSE-2.0.html',
             ],
@@ -63,7 +63,7 @@ class LicenseObjectFactoryTest extends TestCase
 
         yield 'complete with identifier @3.1' => [
             'version' => Version::V3_1,
-            'data' => [
+            'data' => (object) [
                 'name' => 'Apache 2.0',
                 'identifier' => 'Apache-2.0',
             ],

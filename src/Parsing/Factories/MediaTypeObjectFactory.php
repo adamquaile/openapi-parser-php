@@ -10,13 +10,11 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class MediaTypeObjectFactory implements MediaTypeObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): MediaTypeObject
+    public function create(object $data, ParseContext $context): MediaTypeObject
     {
         return new MediaTypeObject(
-            schema: array_key_exists('schema', $data)
-                ? $context->factory->create(SchemaObject::class, $data['schema'], $context)
-                : null,
-            example: $data['example'] ?? null,
+            schema: $context->factory->create(SchemaObject::class, $data->schema ?? null, $context),
+            example: $data->example ?? null,
         );
     }
 }

@@ -9,5 +9,5 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 interface ResponsesObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): ResponsesObject;
+    public function create(object $data, ParseContext $context): ResponsesObject;
 }

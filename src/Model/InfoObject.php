@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Worq\OpenApiParser\Model;
 
-final readonly class InfoObject
+final readonly class InfoObject implements HasSpecificationExtensions
 {
     public function __construct(
         public string $title,
@@ -14,6 +14,7 @@ final readonly class InfoObject
         public ?string $termsOfService = null,
         public ?ContactObject $contact = null,
         public ?LicenseObject $license = null,
+        public object $x = new \stdClass(),
     ) {
 
     }

@@ -9,12 +9,15 @@ use Worq\OpenApiParser\Parsing\ParseContext;
 
 final class ContactObjectFactory implements ContactObjectFactoryInterface
 {
-    public function create(array $data, ParseContext $context): ContactObject
+    use SpecificationExtensionFactoryTrait;
+
+    public function create(object $data, ParseContext $context): ContactObject
     {
         return new ContactObject(
-            name: $data['name'] ?? null,
-            url: $data['url'] ?? null,
-            email: $data['email'] ?? null,
+            name: $data->name ?? null,
+            url: $data->url ?? null,
+            email: $data->email ?? null,
+            x: $this->parsedExtensionObject($data)
         );
     }
 }

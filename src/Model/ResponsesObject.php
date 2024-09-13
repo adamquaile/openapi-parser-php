@@ -7,13 +7,14 @@ namespace Worq\OpenApiParser\Model;
 /**
  * @implements MapInterface<ResponseObject>
  */
+#[\AllowDynamicProperties]
 final class ResponsesObject implements MapInterface
 {
     use MapTrait;
 
     public function __construct(
-        /** @var array<string, ResponseObject> */
-        public array $items
+        /** @var \Traversable<string, ResponseObject> */
+        public object $items
     ) {
     }
 }
