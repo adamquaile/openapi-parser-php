@@ -11,6 +11,7 @@ final readonly class OpenApiObject
         public InfoObject $info,
         public ?PathsObject $paths = null,
         public ?ComponentsObject $components = null,
+        public ?array $servers = null,
     ) {
 
     }

@@ -44,6 +44,14 @@ trait ObjectFactoryTest
         $this->assertInstanceOf($interface, $this->factory);
     }
 
+    /**
+     * @return array{data: mixed, expected: object}>
+     */
+    public static function firstExample(): array
+    {
+        return array_values(iterator_to_array(self::examples()))[0];
+    }
+
     #[DataProvider('examples')]
     public function testExamples(Version $version, object $data, object $expected): void
     {
