@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\SchemaObject;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\SchemaObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class SchemaObjectFactory implements SchemaObjectFactoryInterface
 {

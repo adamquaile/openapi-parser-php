@@ -1,18 +1,18 @@
 <?php
 
-namespace Worq\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\ContactObject;
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\LicenseObject;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\Factories\InfoObjectFactory;
-use Worq\OpenApiParser\Parsing\Factory;
-use Worq\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use Worq\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use TypeSlow\OpenApiParser\Model\ContactObject;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\LicenseObject;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\Factories\InfoObjectFactory;
+use TypeSlow\OpenApiParser\Parsing\Factory;
+use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(InfoObject::class)]
 #[CoversClass(InfoObjectFactory::class)]

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Model;
+namespace TypeSlow\OpenApiParser\Model;
 
 final readonly class ContactObject implements HasSpecificationExtensions
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Support;
+namespace TypeSlow\OpenApiParser\Tests\Support;
 
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\HasSpecificationExtensions;
+use TypeSlow\OpenApiParser\Model\HasSpecificationExtensions;
 
 /**
  * @mixin TestCase
@@ -18,7 +18,7 @@ trait SpecificationExtensionsObjectFactoryTest
     {
         $factoryTestClass = (new \ReflectionClass(static::class))->getShortName();
         self::assertStringEndsWith('FactoryTest', $factoryTestClass);
-        $objectClass = '\\Worq\\OpenApiParser\\Model\\' . substr($factoryTestClass, 0, -11);
+        $objectClass = '\\TypeSlow\\OpenApiParser\\Model\\' . substr($factoryTestClass, 0, -11);
 
         $this->assertTrue(
             is_a($objectClass, HasSpecificationExtensions::class, allow_string: true),

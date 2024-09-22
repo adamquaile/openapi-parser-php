@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\OpenApiObject;
-use Worq\OpenApiParser\Model\OperationObject;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\OpenApiObject;
+use TypeSlow\OpenApiParser\Model\OperationObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class OperationObjectFactory
 {

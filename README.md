@@ -7,7 +7,7 @@ For now, it's strict and is not intended to support invalid specification files.
 ## Installation
 
 ```bash
-composer require worq/openapi-parser
+composer require typeslow/openapi-parser
 ```
 
 ### Compatibility

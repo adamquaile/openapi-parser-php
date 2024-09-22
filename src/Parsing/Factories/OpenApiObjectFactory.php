@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Exceptions\OpenApiValidationError;
-use Worq\OpenApiParser\Model\ComponentsObject;
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\OpenApiObject;
-use Worq\OpenApiParser\Model\PathsObject;
-use Worq\OpenApiParser\Model\ServerObject;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
+use TypeSlow\OpenApiParser\Model\ComponentsObject;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\OpenApiObject;
+use TypeSlow\OpenApiParser\Model\PathsObject;
+use TypeSlow\OpenApiParser\Model\ServerObject;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class OpenApiObjectFactory
 {

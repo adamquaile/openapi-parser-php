@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Support;
+namespace TypeSlow\OpenApiParser\Tests\Support;
 
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\Factory;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\Factory;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 
 /**
@@ -25,7 +25,7 @@ trait ObjectFactoryTest
     {
         $factoryTestClass = (new \ReflectionClass(static::class))->getShortName();
         self::assertStringEndsWith('Test', $factoryTestClass);
-        $factoryClass = '\\Worq\\OpenApiParser\\Parsing\\Factories\\' . substr($factoryTestClass, 0, -4);
+        $factoryClass = '\\TypeSlow\\OpenApiParser\\Parsing\\Factories\\' . substr($factoryTestClass, 0, -4);
         $this->factory = new $factoryClass();
     }
 

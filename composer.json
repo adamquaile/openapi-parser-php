@@ -1,14 +1,14 @@
 {
-    "name": "worq/openapi-parser",
+    "name": "typeslow/openapi-parser",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Worq\\OpenApiParser\\": "src/"
+            "TypeSlow\\OpenApiParser\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Worq\\OpenApiParser\\Tests\\": "tests/"
+            "TypeSlow\\OpenApiParser\\Tests\\": "tests/"
         }
     },
     "authors": [

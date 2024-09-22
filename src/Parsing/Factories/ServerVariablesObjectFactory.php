@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\MapTrait;
-use Worq\OpenApiParser\Model\ServerVariableObject;
-use Worq\OpenApiParser\Model\ServerVariablesObject;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\MapTrait;
+use TypeSlow\OpenApiParser\Model\ServerVariableObject;
+use TypeSlow\OpenApiParser\Model\ServerVariablesObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class ServerVariablesObjectFactory implements ServerVariablesObjectFactoryInterface
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\ServerObject;
-use Worq\OpenApiParser\Model\ServerVariablesObject;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\ServerObject;
+use TypeSlow\OpenApiParser\Model\ServerVariablesObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class ServerObjectFactory implements ServerObjectFactoryInterface
 {

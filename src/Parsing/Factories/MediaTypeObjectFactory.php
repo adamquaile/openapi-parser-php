@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\MediaTypeObject;
-use Worq\OpenApiParser\Model\SchemaObject;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\MediaTypeObject;
+use TypeSlow\OpenApiParser\Model\SchemaObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class MediaTypeObjectFactory implements MediaTypeObjectFactoryInterface
 {

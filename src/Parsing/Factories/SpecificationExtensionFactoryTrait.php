@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
 trait SpecificationExtensionFactoryTrait
 {

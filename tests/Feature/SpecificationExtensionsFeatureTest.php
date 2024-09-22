@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Feature;
+namespace TypeSlow\OpenApiParser\Tests\Feature;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\ContactObject;
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\OpenApiObject;
-use Worq\OpenApiParser\Model\PathsObject;
-use Worq\OpenApiParser\OpenApiParser;
+use TypeSlow\OpenApiParser\Model\ContactObject;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\OpenApiObject;
+use TypeSlow\OpenApiParser\Model\PathsObject;
+use TypeSlow\OpenApiParser\OpenApiParser;
 
 #[CoversClass(OpenApiParser::class)]
 final class SpecificationExtensionsFeatureTest extends TestCase

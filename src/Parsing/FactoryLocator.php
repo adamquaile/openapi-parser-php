@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing;
+namespace TypeSlow\OpenApiParser\Parsing;
 
 use Psr\Container\ContainerInterface;
 

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Support;
+namespace TypeSlow\OpenApiParser\Tests\Support;
 
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\MapInterface;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\Factory;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\MapInterface;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\Factory;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 
 /**

@@ -1,14 +1,14 @@
 <?php
 
-namespace Worq\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\ContactObject;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\Factories\ContactObjectFactory;
-use Worq\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use Worq\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use TypeSlow\OpenApiParser\Model\ContactObject;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\Factories\ContactObjectFactory;
+use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(ContactObjectFactory::class)]
 #[CoversClass(ContactObject::class)]

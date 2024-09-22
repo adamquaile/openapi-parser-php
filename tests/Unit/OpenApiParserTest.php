@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Unit;
+namespace TypeSlow\OpenApiParser\Tests\Unit;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Exceptions\InvalidOpenApiDocument;
-use Worq\OpenApiParser\Exceptions\OpenApiValidationError;
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\OpenApiObject;
-use Worq\OpenApiParser\OpenApiParser;
-use Worq\OpenApiParser\Parsing\DocumentPath;
+use TypeSlow\OpenApiParser\Exceptions\InvalidOpenApiDocument;
+use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\OpenApiObject;
+use TypeSlow\OpenApiParser\OpenApiParser;
+use TypeSlow\OpenApiParser\Parsing\DocumentPath;
 
 #[CoversClass(OpenApiParser::class)]
 final class OpenApiParserTest extends TestCase

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\ContactObject;
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\LicenseObject;
-use Worq\OpenApiParser\Model\OpenApiObject;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\ContactObject;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\LicenseObject;
+use TypeSlow\OpenApiParser\Model\OpenApiObject;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class InfoObjectFactory implements InfoObjectFactoryInterface
 {

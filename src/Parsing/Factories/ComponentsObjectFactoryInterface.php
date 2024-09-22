@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\ComponentsObject;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\ComponentsObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 interface ComponentsObjectFactoryInterface
 {

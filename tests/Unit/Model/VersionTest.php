@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Model;
+namespace TypeSlow\OpenApiParser\Tests\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Model\Version;
 
 #[CoversClass(Version::class)]
 final class VersionTest extends TestCase

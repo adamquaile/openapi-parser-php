@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser;
+namespace TypeSlow\OpenApiParser;
 
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Yaml\Yaml;
-use Worq\OpenApiParser\Exceptions\InvalidOpenApiDocument;
-use Worq\OpenApiParser\Exceptions\OpenApiValidationError;
-use Worq\OpenApiParser\Model\OpenApiObject;
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\DocumentPath;
-use Worq\OpenApiParser\Parsing\Factory;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Exceptions\InvalidOpenApiDocument;
+use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
+use TypeSlow\OpenApiParser\Model\OpenApiObject;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\DocumentPath;
+use TypeSlow\OpenApiParser\Parsing\Factory;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final readonly class OpenApiParser
 {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Exceptions\InvalidOpenApiDocument;
-use Worq\OpenApiParser\Exceptions\OpenApiValidationError;
-use Worq\OpenApiParser\Model\InfoObject;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\DocumentPath;
-use Worq\OpenApiParser\Parsing\Factories\OpenApiObjectFactory;
-use Worq\OpenApiParser\Parsing\Factory;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Exceptions\InvalidOpenApiDocument;
+use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
+use TypeSlow\OpenApiParser\Model\InfoObject;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\DocumentPath;
+use TypeSlow\OpenApiParser\Parsing\Factories\OpenApiObjectFactory;
+use TypeSlow\OpenApiParser\Parsing\Factory;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 #[CoversClass(OpenApiObjectFactory::class)]
 final class OpenApiObjectFactoryTest extends TestCase

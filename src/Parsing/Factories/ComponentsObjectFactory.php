@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use Worq\OpenApiParser\Model\ComponentsObject;
-use Worq\OpenApiParser\Model\ResponsesObject;
-use Worq\OpenApiParser\Model\SchemasObject;
-use Worq\OpenApiParser\Parsing\ParseContext;
+use TypeSlow\OpenApiParser\Model\ComponentsObject;
+use TypeSlow\OpenApiParser\Model\ResponsesObject;
+use TypeSlow\OpenApiParser\Model\SchemasObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class ComponentsObjectFactory
 {

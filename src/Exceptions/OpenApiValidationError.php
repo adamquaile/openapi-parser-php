@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Exceptions;
+namespace TypeSlow\OpenApiParser\Exceptions;
 
-use Worq\OpenApiParser\Parsing\DocumentPath;
+use TypeSlow\OpenApiParser\Parsing\DocumentPath;
 
 final class OpenApiValidationError extends \Exception
 {

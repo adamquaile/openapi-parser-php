@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Worq\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Worq\OpenApiParser\Model\ServerObject;
-use Worq\OpenApiParser\Model\ServerVariableObject;
-use Worq\OpenApiParser\Model\ServerVariablesObject;
-use Worq\OpenApiParser\Model\Version;
-use Worq\OpenApiParser\Parsing\Factories\ServerObjectFactory;
-use Worq\OpenApiParser\Parsing\Factory;
-use Worq\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use Worq\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use TypeSlow\OpenApiParser\Model\ServerObject;
+use TypeSlow\OpenApiParser\Model\ServerVariableObject;
+use TypeSlow\OpenApiParser\Model\ServerVariablesObject;
+use TypeSlow\OpenApiParser\Model\Version;
+use TypeSlow\OpenApiParser\Parsing\Factories\ServerObjectFactory;
+use TypeSlow\OpenApiParser\Parsing\Factory;
+use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(ServerObject::class)]
 #[CoversClass(ServerObjectFactory::class)]
