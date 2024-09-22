@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Worq\OpenApiParser\Model;
 
-final class ServerObject
+final class ServerObject implements HasSpecificationExtensions
 {
     public function __construct(
         public string $url,
         public ?string $description = null,
-        public ?ServerVariableObject $variables = null,
+        public ?ServerVariablesObject $variables = null,
+        public object $x = new \stdClass(),
     ) {
     }
 }

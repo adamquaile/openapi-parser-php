@@ -25,7 +25,7 @@ trait SpecificationExtensionsObjectFactoryTest
             "$objectClass must implement " . HasSpecificationExtensions::class
         );
 
-        $firstExample = array_values(iterator_to_array(self::examples()))[0];
+        $firstExample = self::firstExample();
 
         $firstExample['data']->{'x-foo'} = 'bar';
         $firstExample['data']->{'x-bar'} = (object) ['baz' => 'qux'];
