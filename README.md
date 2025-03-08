@@ -65,7 +65,7 @@ Support for new versions may require a new major version, at which point EOL ver
 | Tag Object                    | ❌      |       |
 | Reference Object              | ❌      |       |
 | Schema Object                 | ❌      |       |
-| Discriminator Object          | ❌      |       |
+| Discriminator Object          | ✅      |       |
 | XML Object                    | ❌      |       |
 | Security Scheme Object        | ❌      |       |
 
