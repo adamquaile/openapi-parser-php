@@ -66,7 +66,7 @@ Support for new versions may require a new major version, at which point EOL ver
 | Reference Object              | ❌      |       |
 | Schema Object                 | ❌      |       |
 | Discriminator Object          | ✅      |       |
-| XML Object                    | ❌      |       |
+| XML Object                    | ✅      |       |
 | Security Scheme Object        | ❌      |       |
 
 [^1]: Specification Extensions support missing
