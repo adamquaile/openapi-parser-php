@@ -18,9 +18,9 @@ final class SchemaObjectFactory implements SchemaObjectFactoryInterface
     {
         return new SchemaObject(
             dynamic: $this->removeExtendedKeys($data),
-            discriminator: $context->factory->create(DiscriminatorObject::class, $data->discriminator, $context),
-            xml: $context->factory->create(XmlObject::class, $data->xml, $context),
-            externalDocs: $context->factory->create(ExternalDocumentationObject::class, $data->externalDocs, $context),
+            discriminator: $context->factory->create(DiscriminatorObject::class, $data->discriminator ?? null, $context),
+            xml: $context->factory->create(XmlObject::class, $data->xml ?? null, $context),
+            externalDocs: $context->factory->create(ExternalDocumentationObject::class, $data->externalDocs ?? null, $context),
             x: $this->parsedExtensionObject($data)
         );
     }
