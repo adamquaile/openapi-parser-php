@@ -28,7 +28,11 @@ Support for new versions may require a new major version, at which point EOL ver
 
 | OpenAPI Parser Version | Swagger (2.0) | OpenAPI (3.0) | OpenAPI (3.1) |
 |------------------------|---------------|---------------|---------------|
-| 0.x                    | ❌            | ✅            | ✅            |
+| 0.x                    | ❌            | ⚠️            | ✅            |
+
+This library is being developed at a time when OpenAPI 3.1 is already quite widely-used. There's a lot to cover in
+creating this project, so 3.0 support is not a priority. Pull requests will be considered and 3.0 support is the goal,
+but efforts will be focused on later versions.
 
 #### OpenAPI Feature Support (How complete is this library)
 
@@ -43,31 +47,31 @@ Support for new versions may require a new major version, at which point EOL ver
 
 | Object                        | Support | Notes |
 |-------------------------------|---------|-------|
-| OpenAPI Object                | ❌      |       |
-| Info Object                   | ✅      |       |
-| Contact Object                | ✅      |       |
-| License Object                | ✅      | [^1]  |
-| Server Object                 | ✅      |       |
-| Server Variable Object        | ✅      |       |
-| Components Object             | ❌      |       |
-| Paths Object                  | ❌      |       |
-| Path Item Object              | ❌      |       |
-| Operation Object              | ❌      |       |
-| External Documentation Object | ❌      |       |
-| Request Body Object           | ❌      |       |
-| Media Type Object             | ❌      |       |
-| Encoding Object               | ❌      |       |
-| Responses Object              | ❌      |       |
-| Callback Object               | ❌      |       |
-| Example Object                | ❌      |       |
-| Link Object                   | ❌      |       |
-| Header Object                 | ❌      |       |
-| Tag Object                    | ❌      |       |
-| Reference Object              | ❌      |       |
-| Schema Object                 | ❌      |       |
-| Discriminator Object          | ✅      |       |
-| XML Object                    | ✅      |       |
-| Security Scheme Object        | ❌      |       |
+| OpenAPI Object                | ❌       |       |
+| Info Object                   | ✅       |       |
+| Contact Object                | ✅       |       |
+| License Object                | ✅       | [^1]  |
+| Server Object                 | ✅       |       |
+| Server Variable Object        | ✅       |       |
+| Components Object             | ❌       |       |
+| Paths Object                  | ❌       |       |
+| Path Item Object              | ❌       |       |
+| Operation Object              | ❌       |       |
+| External Documentation Object | ❌       |       |
+| Request Body Object           | ❌       |       |
+| Media Type Object             | ❌       |       |
+| Encoding Object               | ❌       |       |
+| Responses Object              | ❌       |       |
+| Callback Object               | ❌       |       |
+| Example Object                | ❌       |       |
+| Link Object                   | ❌       |       |
+| Header Object                 | ❌       |       |
+| Tag Object                    | ❌       |       |
+| Reference Object              | ❌       |       |
+| Schema Object                 | ⚠️[^2]  |       |
+| Discriminator Object          | ✅       |       |
+| XML Object                    | ✅       |       |
+| Security Scheme Object        | ❌       |       |
 
 [^1]: Specification Extensions support missing
-
+[^2]: Full OpenAPI 3.0 support missing
