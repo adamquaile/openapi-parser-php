@@ -18,4 +18,15 @@ trait SpecificationExtensionFactoryTrait
 
         return $extensions;
     }
+    public function removeExtendedKeys(object $data): ?object
+    {
+        $newData = (object) [];
+        foreach ($data as $key => $value) {
+            if (!str_starts_with($key, 'x-')) {
+                $newData->$key = $value;
+            }
+        }
+
+        return $newData;
+    }
 }
