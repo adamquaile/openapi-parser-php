@@ -63,7 +63,7 @@ but efforts will be focused on later versions.
 | Encoding Object               | ❌       |       |
 | Responses Object              | ❌       |       |
 | Callback Object               | ❌       |       |
-| Example Object                | ❌       |       |
+| Example Object                | ✅       |       |
 | Link Object                   | ❌       |       |
 | Header Object                 | ❌       |       |
 | Tag Object                    | ✅       |       |
