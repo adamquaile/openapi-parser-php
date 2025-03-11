@@ -67,7 +67,7 @@ but efforts will be focused on later versions.
 | Link Object                   | ❌       |       |
 | Header Object                 | ❌       |       |
 | Tag Object                    | ❌       |       |
-| Reference Object              | ❌       |       |
+| Reference Object              | ✅       |       |
 | Schema Object                 | ⚠️[^2]  |       |
 | Discriminator Object          | ✅       |       |
 | XML Object                    | ✅       |       |
