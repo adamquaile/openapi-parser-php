@@ -1,5 +1,5 @@
 {
-    "name": "typeslow/openapi-parser",
+    "name": "typeslowinc/openapi-parser",
     "type": "library",
     "autoload": {
         "psr-4": {
