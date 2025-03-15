@@ -7,7 +7,6 @@ namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ExampleObject;
 use TypeSlow\OpenApiParser\Model\ParameterObject;
 use TypeSlow\OpenApiParser\Model\ParameterObjectExamplesMap;
 use TypeSlow\OpenApiParser\Model\SchemaObject;

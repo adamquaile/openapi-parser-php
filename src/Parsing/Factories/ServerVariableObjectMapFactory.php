@@ -6,20 +6,20 @@ namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
 use TypeSlow\OpenApiParser\Model\MapTrait;
 use TypeSlow\OpenApiParser\Model\ServerVariableObject;
-use TypeSlow\OpenApiParser\Model\ServerVariablesObject;
+use TypeSlow\OpenApiParser\Model\ServerVariableObjectMap;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
-final class ServerVariablesObjectFactory implements ServerVariablesObjectFactoryInterface
+final class ServerVariableObjectMapFactory implements ServerVariableObjectMapFactoryInterface
 {
     use MapFactoryTrait;
 
-    public function create(object $data, ParseContext $context): ServerVariablesObject
+    public function create(object $data, ParseContext $context): ServerVariableObjectMap
     {
         self::modifyEveryObjectProperty(
             $data,
             fn (object $response) => $context->factory->create(ServerVariableObject::class, $response, $context)
         );
 
-        return new ServerVariablesObject(items: $data);
+        return new ServerVariableObjectMap(items: $data);
     }
 }

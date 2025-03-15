@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
 use TypeSlow\OpenApiParser\Model\ServerObject;
-use TypeSlow\OpenApiParser\Model\ServerVariablesObject;
+use TypeSlow\OpenApiParser\Model\ServerVariableObjectMap;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class ServerObjectFactory implements ServerObjectFactoryInterface
@@ -17,7 +17,7 @@ final class ServerObjectFactory implements ServerObjectFactoryInterface
         return new ServerObject(
             url: $data->url,
             description: $data->description ?? null,
-            variables: $context->factory->create(ServerVariablesObject::class, $data->variables ?? null, $context),
+            variables: $context->factory->create(ServerVariableObjectMap::class, $data->variables ?? null, $context),
             x: $this->parsedExtensionObject($data),
         );
     }

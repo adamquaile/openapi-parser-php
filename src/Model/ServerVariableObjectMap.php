@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Model;
 
-final class ServerVariablesObject implements MapInterface
+final class ServerVariableObjectMap implements MapInterface
 {
     use MapTrait;
 
@@ -12,4 +12,5 @@ final class ServerVariablesObject implements MapInterface
         /** @var \Traversable<string, ServerVariableObject> */
         public object $items
     ) {
-    }}
+    }
+}
