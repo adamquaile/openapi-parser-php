@@ -7,8 +7,9 @@ namespace TypeSlow\OpenApiParser\Model;
 final class ExampleObject implements HasSpecificationExtensions
 {
     public function __construct(
-        public string $summary,
-        public object $value,
+        public ?string $summary = null,
+        public ?string $description = null,
+        public mixed $value = null,
         public object $x = new \stdClass(),
     ) {
     }

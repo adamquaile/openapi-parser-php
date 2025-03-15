@@ -12,7 +12,8 @@ final class ExampleObjectFactory implements ExampleObjectFactoryInterface
     public function create(object $data, ParseContext $context): ExampleObject
     {
         return new ExampleObject(
-            summary: $data->summary,
+            summary: $data->summary ?? null,
+            description: $data->description ?? null,
             value: $data->value,
             x: $this->parsedExtensionObject($data),
         );
