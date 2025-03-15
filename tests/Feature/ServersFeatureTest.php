@@ -12,7 +12,7 @@ use TypeSlow\OpenApiParser\Model\OpenApiObject;
 use TypeSlow\OpenApiParser\Model\PathsObject;
 use TypeSlow\OpenApiParser\Model\ServerObject;
 use TypeSlow\OpenApiParser\Model\ServerVariableObject;
-use TypeSlow\OpenApiParser\Model\ServerVariablesObject;
+use TypeSlow\OpenApiParser\Model\ServerVariableObjectMap;
 use TypeSlow\OpenApiParser\OpenApiParser;
 
 #[CoversClass(OpenApiParser::class)]
@@ -41,7 +41,7 @@ final class ServersFeatureTest extends TestCase
                     new ServerObject(
                         url: 'https://{environment}.example.com',
                         description: 'Live server',
-                        variables: new ServerVariablesObject(
+                        variables: new ServerVariableObjectMap(
                             items: (object) [
                                 'environment' => new ServerVariableObject(
                                     default: 'prod',

@@ -9,7 +9,7 @@ final class ServerObject implements HasSpecificationExtensions
     public function __construct(
         public string $url,
         public ?string $description = null,
-        public ?ServerVariablesObject $variables = null,
+        public ?ServerVariableObjectMap $variables = null,
         public object $x = new \stdClass(),
     ) {
     }

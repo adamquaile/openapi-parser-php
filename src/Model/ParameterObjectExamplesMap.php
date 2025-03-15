@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Model;
 
-final class ServerVariablesObject implements MapInterface
+final class ParameterObjectExamplesMap implements MapInterface
 {
     use MapTrait;
 
     public function __construct(
-        /** @var \Traversable<string, ServerVariableObject> */
+        /** @var \Traversable<string, ExampleObject|ReferenceObject> */
         public object $items
     ) {
-    }}
+    }
+}

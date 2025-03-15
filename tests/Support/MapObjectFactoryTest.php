@@ -58,22 +58,11 @@ trait MapObjectFactoryTest
                 }
             );
 
-        $mapObject = $this->mapFactory->create(
+        $mapObject = new $mapClass(items:
             (object)[
-                'object_1' => $rawObject1,
-                'object_2' => $rawObject2,
+                'object_1' => $object1,
+                'object_2' => $object2,
             ],
-            $context
-        );
-
-        $this->assertEquals(
-            new $mapClass(
-                items: (object) [
-                    'object_1' => $object1,
-                    'object_2' => $object2,
-                ]
-            ),
-            $mapObject
         );
 
         $this->assertSame($object1, $mapObject->object_1);

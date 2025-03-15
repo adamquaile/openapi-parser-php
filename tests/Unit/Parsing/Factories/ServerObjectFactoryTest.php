@@ -9,7 +9,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use TypeSlow\OpenApiParser\Model\ServerObject;
 use TypeSlow\OpenApiParser\Model\ServerVariableObject;
-use TypeSlow\OpenApiParser\Model\ServerVariablesObject;
+use TypeSlow\OpenApiParser\Model\ServerVariableObjectMap;
 use TypeSlow\OpenApiParser\Model\Version;
 use TypeSlow\OpenApiParser\Parsing\Factories\ServerObjectFactory;
 use TypeSlow\OpenApiParser\Parsing\Factory;
@@ -32,7 +32,7 @@ final class ServerObjectFactoryTest extends TestCase
                         return null;
                     }
                     return match ($class) {
-                        ServerVariablesObject::class => new ServerVariablesObject(
+                        ServerVariableObjectMap::class => new ServerVariableObjectMap(
                             items: (object) [
                                 'environment' => new ServerVariableObject(
                                     default: 'prod',
@@ -72,7 +72,7 @@ final class ServerObjectFactoryTest extends TestCase
             'expected' => new ServerObject(
                 url: 'https://api.example.com',
                 description: 'The production API server',
-                variables: new ServerVariablesObject(
+                variables: new ServerVariableObjectMap(
                     items: (object) [
                         'environment' => new ServerVariableObject(
                             default: 'prod',
