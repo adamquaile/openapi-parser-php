@@ -1,0 +1,13 @@
+<?php
+
+declare(strict_types=1);
+
+namespace TypeSlow\OpenApiParser\Parsing\Factories;
+
+use TypeSlow\OpenApiParser\Model\ParameterObject;
+use TypeSlow\OpenApiParser\Parsing\ParseContext;
+
+interface ParameterObjectFactoryInterface
+{
+    public function create(object $data, ParseContext $context): ParameterObject;
+}
