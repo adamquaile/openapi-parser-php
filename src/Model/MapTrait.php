@@ -6,7 +6,7 @@ namespace TypeSlow\OpenApiParser\Model;
 
 /**
  * @mixin MapInterface
- * @template MappedItem of object
+ * @template MappedItem of mixed
  */
 trait MapTrait
 {
@@ -14,7 +14,7 @@ trait MapTrait
      * @param string $offset
      * @return MappedItem
      */
-    public function __get(string $offset): ?object
+    public function __get(string $offset): mixed
     {
         return $this->items->$offset ?? null;
     }
@@ -51,9 +51,9 @@ trait MapTrait
 
     /**
      * @param string $offset
-     * @return ?MappedItem
+     * @return MappedItem
      */
-    public function entryNamed(string $offset): ?object
+    public function entryNamed(string $offset): mixed
     {
         return $this->items->$offset ?? null;
     }
