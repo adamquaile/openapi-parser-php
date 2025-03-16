@@ -92,8 +92,8 @@ but efforts will be focused on later versions.
 | Discriminator Object          | ✅       |       |
 | XML Object                    | ✅       |       |
 | Security Scheme Object        | ❌       |       |
-| OAuth Flows Object            | ❌       |       |
-| OAuth Flow Object             | ❌       |       |
+| OAuth Flows Object            | ✅       |       |
+| OAuth Flow Object             | ✅       |       |
 | Security Requirement Object   | ❌       |       |
 
 [^1]: Specification Extensions support missing
