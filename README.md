@@ -10,6 +10,24 @@ For now, it's strict and is not intended to support invalid specification files.
 composer require typeslow/openapi-parser
 ```
 
+### Usage
+
+Here's an example usage of the library. Check [./tests/Feature](./tests/Feature) for more examples.
+
+```php
+<?php
+
+use TypeSlow\OpenApiParser\OpenApiParser;
+
+$openapiParser = new OpenApiParser();
+$openapi = $openapiParser->parseYamlString(
+    file_get_contents('openapi.yaml')
+);
+
+echo $openapi->info->version;
+
+```
+
 ### Compatibility
 
 This library is not yet at version 1.0, so all of the following may change at any time.
