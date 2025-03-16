@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TypeSlow\OpenApiParser\Model;
 
 /**
- * @template MappedItem of object
+ * @template MappedItem of mixed
  */
 interface MapInterface extends \IteratorAggregate, \ArrayAccess
 {
@@ -25,5 +25,5 @@ interface MapInterface extends \IteratorAggregate, \ArrayAccess
      * @param string $name
      * @return ?MappedItem
      */
-    public function entryNamed(string $name): ?object;
+    public function entryNamed(string $name): mixed;
 }
