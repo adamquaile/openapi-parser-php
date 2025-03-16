@@ -63,6 +63,7 @@ but efforts will be focused on later versions.
 | Media Type Object             | ❌       |       |
 | Encoding Object               | ❌       |       |
 | Responses Object              | ❌       |       |
+| Response  Object              | ❌       |       |
 | Callback Object               | ❌       |       |
 | Example Object                | ✅       |       |
 | Link Object                   | ❌       |       |
@@ -73,6 +74,9 @@ but efforts will be focused on later versions.
 | Discriminator Object          | ✅       |       |
 | XML Object                    | ✅       |       |
 | Security Scheme Object        | ❌       |       |
+| OAuth Flows Object            | ❌       |       |
+| OAuth Flow Object             | ❌       |       |
+| Security Requirement Object   | ❌       |       |
 
 [^1]: Specification Extensions support missing
 [^2]: Full OpenAPI 3.0 support missing
