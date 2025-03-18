@@ -91,7 +91,7 @@ but efforts will be focused on later versions.
 | Schema Object                 | ⚠️[^2]  |       |
 | Discriminator Object          | ✅       |       |
 | XML Object                    | ✅       |       |
-| Security Scheme Object        | ❌       |       |
+| Security Scheme Object        | ✅       |       |
 | OAuth Flows Object            | ✅       |       |
 | OAuth Flow Object             | ✅       |       |
 | Security Requirement Object   | ❌       |       |
