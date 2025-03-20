@@ -27,7 +27,7 @@ readonly class Factory
      * @param ParseContext $context
      * @return ?T
      */
-    public function create(string $object, ?object $data, ParseContext $context): ?object
+    public function create(string $object, mixed $data, ParseContext $context): ?object
     {
         if (is_null($data)) {
             return null;

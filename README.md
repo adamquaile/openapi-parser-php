@@ -84,7 +84,7 @@ but efforts will be focused on later versions.
 | Response  Object              | ❌       |       |
 | Callback Object               | ❌       |       |
 | Example Object                | ✅       |       |
-| Link Object                   | ❌       |       |
+| Link Object                   | ✅       |       |
 | Header Object                 | ❌       |       |
 | Tag Object                    | ✅       |       |
 | Reference Object              | ✅       |       |
