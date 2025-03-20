@@ -94,7 +94,7 @@ but efforts will be focused on later versions.
 | Security Scheme Object        | ✅       |       |
 | OAuth Flows Object            | ✅       |       |
 | OAuth Flow Object             | ✅       |       |
-| Security Requirement Object   | ❌       |       |
+| Security Requirement Object   | ✅       |       |
 
 [^1]: Specification Extensions support missing
 [^2]: Full OpenAPI 3.0 support missing
