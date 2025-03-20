@@ -53,13 +53,16 @@ trait ObjectFactoryTest
     }
 
     #[DataProvider('examples')]
-    public function testExamples(Version $version, object $data, object $expected): void
+    public function testExamples(Version $version, object|string $data, object $expected, ?callable $assert = null): void
     {
         $factory = $this->createMock(Factory::class);
         $this->setupPreconditions($factory);
-        $this->assertEquals(
-            $expected,
-            $this->factory->create($data, new ParseContext(version: $version, factory: $factory))
-        );
+        $actual = $this->factory->create($data, new ParseContext(version: $version, factory: $factory));
+
+        $this->assertEquals($expected, $actual);
+
+        if (!is_null($assert)) {
+            $assert($actual);
+        }
     }
 }
