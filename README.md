@@ -75,7 +75,7 @@ but efforts will be focused on later versions.
 | Paths Object                  | ❌       |       |
 | Path Item Object              | ❌       |       |
 | Operation Object              | ❌       |       |
-| External Documentation Object | ❌       |       |
+| External Documentation Object | ✅       |       |
 | Parameter Object              | ✅       |       |
 | Request Body Object           | ❌       |       |
 | Media Type Object             | ❌       |       |
