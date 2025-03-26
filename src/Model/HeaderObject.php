@@ -16,7 +16,7 @@ final class HeaderObject implements HasSpecificationExtensions
         public ?bool $allowReserved = false,
         public ?SchemaObject $schema = null,
         public mixed $example = null,
-        public ?ParameterObjectExamplesMap $examples = null,
+        public ?HeaderObjectExamplesMap $examples = null,
         public ?MediaTypeObjectMap $content = null,
         public object $x = new \stdClass(),
     ) {
