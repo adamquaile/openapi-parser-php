@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Model;
 
-final class ParameterObject implements HasSpecificationExtensions
+final class HeaderObject implements HasSpecificationExtensions
 {
     public function __construct(
-        public string $name,
-        public string $in,
         public ?string $description = null,
         public bool $required = false,
         public ?bool $deprecated = false,
@@ -18,7 +16,7 @@ final class ParameterObject implements HasSpecificationExtensions
         public ?bool $allowReserved = false,
         public ?SchemaObject $schema = null,
         public mixed $example = null,
-        public ?ParameterObjectExamplesMap $examples = null,
+        public ?HeaderObjectExamplesMap $examples = null,
         public ?MediaTypeObjectMap $content = null,
         public object $x = new \stdClass(),
     ) {
