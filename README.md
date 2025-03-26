@@ -77,7 +77,7 @@ but efforts will be focused on later versions.
 | Operation Object              | ❌       |       |
 | External Documentation Object | ✅       |       |
 | Parameter Object              | ✅       |       |
-| Request Body Object           | ❌       |       |
+| Request Body Object           | ✅       |       |
 | Media Type Object             | ❌       |       |
 | Encoding Object               | ❌       |       |
 | Responses Object              | ❌       |       |
