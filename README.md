@@ -81,7 +81,7 @@ but efforts will be focused on later versions.
 | Media Type Object             | ❌       |       |
 | Encoding Object               | ❌       |       |
 | Responses Object              | ❌       |       |
-| Response  Object              | ❌       |       |
+| Response  Object              | ✅       |       |
 | Callback Object               | ❌       |       |
 | Example Object                | ✅       |       |
 | Link Object                   | ✅       |       |
