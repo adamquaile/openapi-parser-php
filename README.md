@@ -80,7 +80,7 @@ but efforts will be focused on later versions.
 | Request Body Object           | ✅       |       |
 | Media Type Object             | ❌       |       |
 | Encoding Object               | ❌       |       |
-| Responses Object              | ❌       |       |
+| Responses Object              | ✅       |       |
 | Response  Object              | ✅       |       |
 | Callback Object               | ❌       |       |
 | Example Object                | ✅       |       |
