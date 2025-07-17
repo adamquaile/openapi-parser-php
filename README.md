@@ -82,7 +82,7 @@ but efforts will be focused on later versions.
 | Encoding Object               | ❌       |       |
 | Responses Object              | ✅       |       |
 | Response  Object              | ✅       |       |
-| Callback Object               | ❌       |       |
+| Callback Object               | ⚠️       | [^4]  |
 | Example Object                | ✅       |       |
 | Link Object                   | ✅       |       |
 | Header Object                 | ✅       |       |
@@ -99,3 +99,4 @@ but efforts will be focused on later versions.
 [^1]: Specification Extensions support missing
 [^2]: Full OpenAPI 3.0 support missing
 [^3]: Callback support missing
+[^4]: RuntimeExpressions are not automatically resolved in CallbackObjects
