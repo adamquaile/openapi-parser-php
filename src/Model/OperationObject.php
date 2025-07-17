@@ -4,20 +4,25 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Model;
 
-final class OperationObject
+final class OperationObject implements HasSpecificationExtensions
 {
     public function __construct(
+        /**
+         * @var ?array<string>
+         */
+        public ?array $tags = null,
         public ?string $summary = null,
         public ?string $description = null,
         public ?ExternalDocumentationObject $externalDocs = null,
         public ?string $operationId = null,
-        public ?array $parameters = null,
-        public ?RequestBodyObject $requestBody = null,
+        public ?OperationObjectParametersList $parameters = null,
+        public RequestBodyObject|ReferenceObject|null $requestBody = null,
         public ?ResponsesObject $responses = null,
         public ?array $callbacks = null,
-        public ?bool $deprecated = null,
-        public ?array $security = null,
+        public bool $deprecated = false,
+        public ?SecurityRequirementObject $security = null,
         public ?array $servers = null,
+        public object $x = new \stdClass(),
     ) {
     }
 }

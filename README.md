@@ -74,7 +74,7 @@ but efforts will be focused on later versions.
 | Components Object             | ❌       |       |
 | Paths Object                  | ❌       |       |
 | Path Item Object              | ❌       |       |
-| Operation Object              | ❌       |       |
+| Operation Object              | ⚠️       | [^3]  |
 | External Documentation Object | ✅       |       |
 | Parameter Object              | ✅       |       |
 | Request Body Object           | ✅       |       |
@@ -98,3 +98,4 @@ but efforts will be focused on later versions.
 
 [^1]: Specification Extensions support missing
 [^2]: Full OpenAPI 3.0 support missing
+[^3]: Callback support missing
