@@ -6,6 +6,7 @@ namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
 use TypeSlow\OpenApiParser\Model\ExternalDocumentationObject;
 use TypeSlow\OpenApiParser\Model\OperationObject;
+use TypeSlow\OpenApiParser\Model\OperationObjectCallbacksMap;
 use TypeSlow\OpenApiParser\Model\OperationObjectParametersList;
 use TypeSlow\OpenApiParser\Model\RequestBodyObject;
 use TypeSlow\OpenApiParser\Model\ResponsesObject;
@@ -27,6 +28,7 @@ final class OperationObjectFactory implements OperationObjectFactoryInterface
             parameters: $context->factory->create(OperationObjectParametersList::class, $data->parameters ?? null, $context),
             requestBody: $context->factory->create(RequestBodyObject::class, $data->requestBody ?? null, $context),
             responses: $context->factory->create(ResponsesObject::class, $data->responses ?? null, $context),
+            callbacks: $context->factory->create(OperationObjectCallbacksMap::class, $data->callbacks ?? null, $context),
             deprecated: $data->deprecated ?? false,
             security: $context->factory->create(SecurityRequirementObject::class, $data->security ?? null, $context),
             servers: null,

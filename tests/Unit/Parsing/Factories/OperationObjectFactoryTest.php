@@ -12,7 +12,9 @@ use TypeSlow\OpenApiParser\Model\MediaTypeObject;
 use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
 use TypeSlow\OpenApiParser\Model\OAuthFlowObject;
 use TypeSlow\OpenApiParser\Model\OperationObject;
+use TypeSlow\OpenApiParser\Model\OperationObjectCallbacksMap;
 use TypeSlow\OpenApiParser\Model\OperationObjectParametersList;
+use TypeSlow\OpenApiParser\Model\ReferenceObject;
 use TypeSlow\OpenApiParser\Model\RequestBodyObject;
 use TypeSlow\OpenApiParser\Model\ResponsesObject;
 use TypeSlow\OpenApiParser\Model\SchemaObject;
@@ -42,6 +44,9 @@ final class OperationObjectFactoryTest extends TestCase
                     '405' => (object) ['description' => 'Method Not Allowed'],
                 ]),
                 SecurityRequirementObject::class => new SecurityRequirementObject(items: $data->security ?? (object) []),
+                OperationObjectCallbacksMap::class => new OperationObjectCallbacksMap(items: (object) [
+                    'petUpdated' => new ReferenceObject(ref: '#/components/callbacks/petUpdated'),
+                ]),
             });
     }
 
@@ -107,6 +112,22 @@ final class OperationObjectFactoryTest extends TestCase
                     '405' => (object) ['description' => 'Method Not Allowed'],
                 ]),
                 security: new SecurityRequirementObject(items: (object) [])
+            ),
+        ];
+
+        yield 'callbacks example' => [
+            'version' => Version::V3_1,
+            'data' => (object) [
+                'callbacks' => (object) [
+                    'petUpdated' => (object) [
+                        '$ref' => '#/components/callbacks/petUpdated',
+                    ],
+                ]
+            ],
+            'expected' => new OperationObject(
+                callbacks: new OperationObjectCallbacksMap(items: (object) [
+                    'petUpdated' => new ReferenceObject(ref: '#/components/callbacks/petUpdated'),
+                ])
             ),
         ];
     }

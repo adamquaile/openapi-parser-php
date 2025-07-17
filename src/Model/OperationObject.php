@@ -18,7 +18,7 @@ final class OperationObject implements HasSpecificationExtensions
         public ?OperationObjectParametersList $parameters = null,
         public RequestBodyObject|ReferenceObject|null $requestBody = null,
         public ?ResponsesObject $responses = null,
-        public ?array $callbacks = null,
+        public ?OperationObjectCallbacksMap $callbacks = null,
         public bool $deprecated = false,
         public ?SecurityRequirementObject $security = null,
         public ?array $servers = null,
