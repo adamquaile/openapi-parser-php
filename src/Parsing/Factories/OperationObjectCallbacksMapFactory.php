@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
 use TypeSlow\OpenApiParser\Model\CallbackObject;
-use TypeSlow\OpenApiParser\Model\LinkObjectMap;
 use TypeSlow\OpenApiParser\Model\OperationObjectCallbacksMap;
 use TypeSlow\OpenApiParser\Model\ReferenceObject;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;

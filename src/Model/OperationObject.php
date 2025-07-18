@@ -21,7 +21,7 @@ final class OperationObject implements HasSpecificationExtensions
         public ?OperationObjectCallbacksMap $callbacks = null,
         public bool $deprecated = false,
         public ?SecurityRequirementObject $security = null,
-        public ?array $servers = null,
+        public ?ServersList $servers = null,
         public object $x = new \stdClass(),
     ) {
     }

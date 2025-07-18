@@ -74,7 +74,7 @@ but efforts will be focused on later versions.
 | Components Object             | ❌       |       |
 | Paths Object                  | ❌       |       |
 | Path Item Object              | ❌       |       |
-| Operation Object              | ⚠️       | [^3]  |
+| Operation Object              | ✅       |       |
 | External Documentation Object | ✅       |       |
 | Parameter Object              | ✅       |       |
 | Request Body Object           | ✅       |       |
@@ -82,7 +82,7 @@ but efforts will be focused on later versions.
 | Encoding Object               | ❌       |       |
 | Responses Object              | ✅       |       |
 | Response  Object              | ✅       |       |
-| Callback Object               | ⚠️       | [^4]  |
+| Callback Object               | ⚠️       | [^3]  |
 | Example Object                | ✅       |       |
 | Link Object                   | ✅       |       |
 | Header Object                 | ✅       |       |
@@ -98,5 +98,4 @@ but efforts will be focused on later versions.
 
 [^1]: Specification Extensions support missing
 [^2]: Full OpenAPI 3.0 support missing
-[^3]: Callback support missing
-[^4]: RuntimeExpressions are not automatically resolved in CallbackObjects
+[^3]: RuntimeExpressions are not automatically resolved in CallbackObjects

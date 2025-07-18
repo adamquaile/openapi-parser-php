@@ -53,7 +53,7 @@ trait ObjectFactoryTest
     }
 
     #[DataProvider('examples')]
-    public function testExamples(Version $version, object|string $data, object $expected, ?callable $assert = null): void
+    public function testExamples(Version $version, object|string|array $data, object $expected, ?callable $assert = null): void
     {
         $factory = $this->createMock(Factory::class);
         $this->setupPreconditions($factory);

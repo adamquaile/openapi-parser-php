@@ -19,6 +19,8 @@ use TypeSlow\OpenApiParser\Model\RequestBodyObject;
 use TypeSlow\OpenApiParser\Model\ResponsesObject;
 use TypeSlow\OpenApiParser\Model\SchemaObject;
 use TypeSlow\OpenApiParser\Model\SecurityRequirementObject;
+use TypeSlow\OpenApiParser\Model\ServerObject;
+use TypeSlow\OpenApiParser\Model\ServersList;
 use TypeSlow\OpenApiParser\Model\Version;
 use TypeSlow\OpenApiParser\Parsing\Factories\OperationObjectFactory;
 use TypeSlow\OpenApiParser\Parsing\Factory;
@@ -46,6 +48,10 @@ final class OperationObjectFactoryTest extends TestCase
                 SecurityRequirementObject::class => new SecurityRequirementObject(items: $data->security ?? (object) []),
                 OperationObjectCallbacksMap::class => new OperationObjectCallbacksMap(items: (object) [
                     'petUpdated' => new ReferenceObject(ref: '#/components/callbacks/petUpdated'),
+                ]),
+                ServersList::class => new ServersList(items: [
+                    new ServerObject(url: 'https://api.example.com/v1'),
+                    new ServerObject(url: 'https://api.example.com/v2'),
                 ]),
             });
     }
@@ -130,7 +136,21 @@ final class OperationObjectFactoryTest extends TestCase
                 ])
             ),
         ];
+
+        yield 'servers example' => [
+            'version' => Version::V3_1,
+            'data' => (object) [
+                'servers' => [
+                    (object) ['url' => 'https://api.example.com/v1'],
+                    (object) ['url' => 'https://api.example.com/v2'],
+                ]
+            ],
+            'expected' => new OperationObject(
+                servers: new ServersList(items: [
+                    new ServerObject(url: 'https://api.example.com/v1'),
+                    new ServerObject(url: 'https://api.example.com/v2'),
+                ])
+            ),
+        ];
     }
-
-
 }

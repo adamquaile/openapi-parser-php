@@ -11,6 +11,7 @@ use TypeSlow\OpenApiParser\Model\OperationObjectParametersList;
 use TypeSlow\OpenApiParser\Model\RequestBodyObject;
 use TypeSlow\OpenApiParser\Model\ResponsesObject;
 use TypeSlow\OpenApiParser\Model\SecurityRequirementObject;
+use TypeSlow\OpenApiParser\Model\ServersList;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class OperationObjectFactory implements OperationObjectFactoryInterface
@@ -31,7 +32,7 @@ final class OperationObjectFactory implements OperationObjectFactoryInterface
             callbacks: $context->factory->create(OperationObjectCallbacksMap::class, $data->callbacks ?? null, $context),
             deprecated: $data->deprecated ?? false,
             security: $context->factory->create(SecurityRequirementObject::class, $data->security ?? null, $context),
-            servers: null,
+            servers: $context->factory->create(ServersList::class, $data->servers ?? null, $context),
             x: $this->parsedExtensionObject($data),
         );
     }
