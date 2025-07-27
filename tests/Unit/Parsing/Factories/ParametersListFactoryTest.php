@@ -7,17 +7,17 @@ namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\OperationObjectParametersList;
+use TypeSlow\OpenApiParser\Model\ParametersList;
 use TypeSlow\OpenApiParser\Model\ParameterObject;
 use TypeSlow\OpenApiParser\Model\ReferenceObject;
 use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\OperationObjectParametersListFactory;
+use TypeSlow\OpenApiParser\Parsing\Factories\ParametersListFactory;
 use TypeSlow\OpenApiParser\Parsing\Factory;
 use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
 
-#[CoversClass(OperationObjectParametersList::class)]
-#[CoversClass(OperationObjectParametersListFactory::class)]
-final class OperationObjectParametersListFactoryTest extends TestCase
+#[CoversClass(ParametersList::class)]
+#[CoversClass(ParametersListFactory::class)]
+final class ParametersListFactoryTest extends TestCase
 {
     use ObjectFactoryTest;
 
@@ -37,7 +37,7 @@ final class OperationObjectParametersListFactoryTest extends TestCase
         yield 'empty example' => [
             'version' => Version::V3_1,
             'data' => [],
-            'expected' => new OperationObjectParametersList(items: []),
+            'expected' => new ParametersList(items: []),
         ];
 
         yield 'parameter object example' => [
@@ -48,7 +48,7 @@ final class OperationObjectParametersListFactoryTest extends TestCase
                     'in' => 'query',
                 ],
             ],
-            'expected' => new OperationObjectParametersList(items: [
+            'expected' => new ParametersList(items: [
                 new ParameterObject(
                     name: 'token',
                     in: 'query',
@@ -64,7 +64,7 @@ final class OperationObjectParametersListFactoryTest extends TestCase
                     '$ref' => '#/components/parameters/token',
                 ],
             ],
-            'expected' => new OperationObjectParametersList(items: [
+            'expected' => new ParametersList(items: [
                 new ReferenceObject(ref: '#/components/parameters/token'),
             ]),
         ];
@@ -80,7 +80,7 @@ final class OperationObjectParametersListFactoryTest extends TestCase
                     '$ref' => '#/components/parameters/token',
                 ],
             ],
-            'expected' => new OperationObjectParametersList(items: [
+            'expected' => new ParametersList(items: [
                 new ParameterObject(
                     name: 'token',
                     in: 'query',

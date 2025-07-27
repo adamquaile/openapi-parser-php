@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Model;
 
-final class PathItemObject
+final class PathItemObject implements HasSpecificationExtensions
 {
     public function __construct(
+        public ?string $ref = null,
         public ?string $summary = null,
         public ?string $description = null,
         public ?OperationObject $get = null,
@@ -17,8 +18,9 @@ final class PathItemObject
         public ?OperationObject $head = null,
         public ?OperationObject $patch = null,
         public ?OperationObject $trace = null,
-        public ?ServerObject $servers = null,
-        public ?ParameterObject $parameters = null,
+        public ?ServersList $servers = null,
+        public ?ParametersList $parameters = null,
+        public object $x = new \stdClass(),
     ) {
     }
 }
