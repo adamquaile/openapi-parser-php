@@ -72,7 +72,7 @@ but efforts will be focused on later versions.
 | Server Object                 | ✅       |       |
 | Server Variable Object        | ✅       |       |
 | Components Object             | ❌       |       |
-| Paths Object                  | ❌       |       |
+| Paths Object                  | ✅       |       |
 | Path Item Object              | ✅       |       |
 | Operation Object              | ✅       |       |
 | External Documentation Object | ✅       |       |

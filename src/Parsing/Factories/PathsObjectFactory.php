@@ -12,12 +12,18 @@ use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class PathsObjectFactory implements PathsObjectFactoryInterface
 {
+    use SpecificationExtensionFactoryTrait;
+
     public function create(object $data, ParseContext $context): PathsObject
     {
+        $paths = self::removeExtendedKeys($data);
         array_walk(
-            $data,
+            $paths,
             fn (object $response) => $context->factory->create(PathItemObject::class, $response, $context),
         );
-        return new PathsObject($data);
+        return new PathsObject(
+            items: $paths,
+            x: $this->parsedExtensionObject($data),
+        );
     }
 }
