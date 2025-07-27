@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Model;
 
-final class OperationObjectParametersList
+final class ParametersList
 {
     public function __construct(
         /** @var array<ParameterObject|ReferenceObject> */

@@ -13,7 +13,7 @@ use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
 use TypeSlow\OpenApiParser\Model\OAuthFlowObject;
 use TypeSlow\OpenApiParser\Model\OperationObject;
 use TypeSlow\OpenApiParser\Model\OperationObjectCallbacksMap;
-use TypeSlow\OpenApiParser\Model\OperationObjectParametersList;
+use TypeSlow\OpenApiParser\Model\ParametersList;
 use TypeSlow\OpenApiParser\Model\ReferenceObject;
 use TypeSlow\OpenApiParser\Model\RequestBodyObject;
 use TypeSlow\OpenApiParser\Model\ResponsesObject;
@@ -39,7 +39,7 @@ final class OperationObjectFactoryTest extends TestCase
         $factory
             ->method('create')
             ->willReturnCallback(fn (string $class, null|object|array $data) => is_null($data) ? null : match ($class) {
-                OperationObjectParametersList::class => new OperationObjectParametersList(items: $data->parameters ?? []),
+                ParametersList::class => new ParametersList(items: $data->parameters ?? []),
                 RequestBodyObject::class => new RequestBodyObject(content: new MediaTypeObjectMap(items: (object) [])),
                 ResponsesObject::class => new ResponsesObject(items: (object) [
                     '200' => (object) ['description' => 'Pet updated.'],
@@ -111,7 +111,7 @@ final class OperationObjectFactoryTest extends TestCase
                 tags: ['pet'],
                 summary: 'Updates a pet in the store with form data',
                 operationId: 'updatePetWithForm',
-                parameters: new OperationObjectParametersList(items: []),
+                parameters: new ParametersList(items: []),
                 requestBody: new RequestBodyObject(content: new MediaTypeObjectMap((object) [])),
                 responses: new ResponsesObject(items: (object) [
                     '200' => (object) ['description' => 'Pet updated.'],
