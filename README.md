@@ -79,7 +79,7 @@ but efforts will be focused on later versions.
 | Parameter Object              | ✅       |       |
 | Request Body Object           | ✅       |       |
 | Media Type Object             | ❌       |       |
-| Encoding Object               | ❌       |       |
+| Encoding Object               | ✅       |       |
 | Responses Object              | ✅       |       |
 | Response  Object              | ✅       |       |
 | Callback Object               | ⚠️       | [^3]  |
