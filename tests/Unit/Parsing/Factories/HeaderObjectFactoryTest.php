@@ -8,11 +8,10 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use TypeSlow\OpenApiParser\Model\HeaderObject;
-use TypeSlow\OpenApiParser\Model\HeaderObjectExamplesMap;
+use TypeSlow\OpenApiParser\Model\ExamplesMap;
 use TypeSlow\OpenApiParser\Model\MediaTypeObject;
 use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
 use TypeSlow\OpenApiParser\Model\ParameterObject;
-use TypeSlow\OpenApiParser\Model\ParameterObjectExamplesMap;
 use TypeSlow\OpenApiParser\Model\SchemaObject;
 use TypeSlow\OpenApiParser\Model\Version;
 use TypeSlow\OpenApiParser\Parsing\Factories\HeaderObjectFactory;
@@ -42,7 +41,7 @@ final class HeaderObjectFactoryTest extends TestCase
                         ],
                     ],
                 ),
-                HeaderObjectExamplesMap::class => new HeaderObjectExamplesMap(items: (object) []),
+                ExamplesMap::class => new ExamplesMap(items: (object) []),
                 MediaTypeObjectMap::class => new MediaTypeObjectMap(items: (object) ['application/json' => new MediaTypeObject()]),
             });
     }

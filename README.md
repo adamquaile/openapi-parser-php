@@ -78,7 +78,7 @@ but efforts will be focused on later versions.
 | External Documentation Object | ✅       |       |
 | Parameter Object              | ✅       |       |
 | Request Body Object           | ✅       |       |
-| Media Type Object             | ❌       |       |
+| Media Type Object             | ✅       |       |
 | Encoding Object               | ✅       |       |
 | Responses Object              | ✅       |       |
 | Response  Object              | ✅       |       |

@@ -9,7 +9,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use TypeSlow\OpenApiParser\Model\EncodingObject;
 use TypeSlow\OpenApiParser\Model\HeaderObject;
-use TypeSlow\OpenApiParser\Model\HeaderObjectExamplesMap;
+use TypeSlow\OpenApiParser\Model\ExamplesMap;
 use TypeSlow\OpenApiParser\Model\HeaderObjectMap;
 use TypeSlow\OpenApiParser\Model\MediaTypeObject;
 use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;

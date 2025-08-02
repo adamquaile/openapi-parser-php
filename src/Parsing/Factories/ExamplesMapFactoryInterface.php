@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\ComponentsObject;
 use TypeSlow\OpenApiParser\Model\ExamplesMap;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;
 

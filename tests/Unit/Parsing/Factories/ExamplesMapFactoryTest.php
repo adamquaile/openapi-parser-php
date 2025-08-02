@@ -9,18 +9,18 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use TypeSlow\OpenApiParser\Model\ExampleObject;
 use TypeSlow\OpenApiParser\Model\ExternalDocumentationObject;
+use TypeSlow\OpenApiParser\Model\ExamplesMap;
 use TypeSlow\OpenApiParser\Model\ParameterObject;
-use TypeSlow\OpenApiParser\Model\ParameterObjectExamplesMap;
 use TypeSlow\OpenApiParser\Model\ReferenceObject;
 use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\ParameterObjectExamplesMapFactory;
+use TypeSlow\OpenApiParser\Parsing\Factories\ExamplesMapFactory;
 use TypeSlow\OpenApiParser\Parsing\Factory;
 use TypeSlow\OpenApiParser\Tests\Support\MapObjectFactoryTest;
 use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
 
-#[CoversClass(ParameterObjectExamplesMap::class)]
-#[CoversClass(ParameterObjectExamplesMapFactory::class)]
-final class ParameterObjectExamplesMapFactoryTest extends TestCase
+#[CoversClass(ExamplesMap::class)]
+#[CoversClass(ExamplesMapFactory::class)]
+final class ExamplesMapFactoryTest extends TestCase
 {
     use ObjectFactoryTest;
     use MapObjectFactoryTest;
@@ -37,12 +37,12 @@ final class ParameterObjectExamplesMapFactoryTest extends TestCase
 
     public static function mapFactoryClass(): string
     {
-        return ParameterObjectExamplesMapFactory::class;
+        return ExamplesMapFactory::class;
     }
 
     public static function mapClass(): string
     {
-        return ParameterObjectExamplesMap::class;
+        return ExamplesMap::class;
     }
 
     public static function examples(): iterable
@@ -53,7 +53,7 @@ final class ParameterObjectExamplesMapFactoryTest extends TestCase
                 'red' => (object) ['value' => 'red'],
                 'blue' => (object) ['value' => 'blue'],
             ],
-            'expected' => new ParameterObjectExamplesMap(items: (object) [
+            'expected' => new ExamplesMap(items: (object) [
                 'red' => new ExampleObject(value: 'red'),
                 'blue' => new ExampleObject(value: 'blue'),
             ])
@@ -63,7 +63,7 @@ final class ParameterObjectExamplesMapFactoryTest extends TestCase
             'data' => (object) [
                 'reference' => (object) ['$ref' => '#/components/schemas/Example'],
             ],
-            'expected' => new ParameterObjectExamplesMap(items: (object) [
+            'expected' => new ExamplesMap(items: (object) [
                 'reference' => new ReferenceObject(ref: '#/components/schemas/Example'),
             ])
         ];
