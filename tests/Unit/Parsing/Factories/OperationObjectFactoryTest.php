@@ -7,7 +7,7 @@ namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\HeaderObjectExamplesMap;
+use TypeSlow\OpenApiParser\Model\ExamplesMap;
 use TypeSlow\OpenApiParser\Model\MediaTypeObject;
 use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
 use TypeSlow\OpenApiParser\Model\OAuthFlowObject;

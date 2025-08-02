@@ -18,7 +18,7 @@ final class ParameterObject implements HasSpecificationExtensions
         public ?bool $allowReserved = false,
         public ?SchemaObject $schema = null,
         public mixed $example = null,
-        public ?ParameterObjectExamplesMap $examples = null,
+        public ?ExamplesMap $examples = null,
         public ?MediaTypeObjectMap $content = null,
         public object $x = new \stdClass(),
     ) {

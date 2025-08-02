@@ -5,15 +5,15 @@ declare(strict_types=1);
 namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
 use TypeSlow\OpenApiParser\Model\ExampleObject;
-use TypeSlow\OpenApiParser\Model\ParameterObjectExamplesMap;
+use TypeSlow\OpenApiParser\Model\ExamplesMap;
 use TypeSlow\OpenApiParser\Model\ReferenceObject;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
-final class ParameterObjectExamplesMapFactory implements ParameterObjectExamplesMapFactoryInterface
+final class ExamplesMapFactory implements ExamplesMapFactoryInterface
 {
     use MapFactoryTrait;
 
-    public function create(object $data, ParseContext $context): ParameterObjectExamplesMap
+    public function create(object $data, ParseContext $context): ExamplesMap
     {
         self::modifyEveryObjectProperty(
             $data,
@@ -23,6 +23,6 @@ final class ParameterObjectExamplesMapFactory implements ParameterObjectExamples
             }
         );
 
-        return new ParameterObjectExamplesMap(items: $data);
+        return new ExamplesMap(items: $data);
     }
 }

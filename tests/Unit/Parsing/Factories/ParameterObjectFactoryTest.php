@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 use TypeSlow\OpenApiParser\Model\MediaTypeObject;
 use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
 use TypeSlow\OpenApiParser\Model\ParameterObject;
-use TypeSlow\OpenApiParser\Model\ParameterObjectExamplesMap;
+use TypeSlow\OpenApiParser\Model\ExamplesMap;
 use TypeSlow\OpenApiParser\Model\SchemaObject;
 use TypeSlow\OpenApiParser\Model\Version;
 use TypeSlow\OpenApiParser\Parsing\Factories\ParameterObjectFactory;
@@ -39,7 +39,7 @@ final class ParameterObjectFactoryTest extends TestCase
                         ],
                     ],
                 ),
-                ParameterObjectExamplesMap::class => new ParameterObjectExamplesMap(items: (object) []),
+                ExamplesMap::class => new ExamplesMap(items: (object) []),
                 MediaTypeObjectMap::class => new MediaTypeObjectMap(items: (object) ['application/json' => new MediaTypeObject()]),
             });
     }
@@ -95,7 +95,7 @@ final class ParameterObjectFactoryTest extends TestCase
             'expected' => new ParameterObject(
                 name: 'colour',
                 in: 'query',
-                examples: new ParameterObjectExamplesMap(items: (object) []),
+                examples: new ExamplesMap(items: (object) []),
             )
         ];
 
