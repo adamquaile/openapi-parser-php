@@ -11,6 +11,7 @@ final class ComponentsObject
         public ?ResponseObjectMap $responses = null,
         public ?ParameterObjectMap $parameters = null,
         public ?ExampleObjectMap $examples = null,
+        public ?RequestBodyObjectMap $requestBodies = null,
     ) {
     }
 }
