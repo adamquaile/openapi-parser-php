@@ -10,6 +10,7 @@ final class ComponentsObject
         public ?SchemaObjectMap $schemas = null,
         public ?ResponseObjectMap $responses = null,
         public ?ParameterObjectMap $parameters = null,
+        public ?ExampleObjectMap $examples = null,
     ) {
     }
 }
