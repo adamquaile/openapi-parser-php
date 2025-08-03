@@ -14,6 +14,7 @@ final class ComponentsObject
         public ?RequestBodyObjectMap $requestBodies = null,
         public ?HeaderObjectMap $headers = null,
         public ?SecuritySchemeObjectMap $securitySchemes = null,
+        public ?LinkObjectMap $links = null,
     ) {
     }
 }
