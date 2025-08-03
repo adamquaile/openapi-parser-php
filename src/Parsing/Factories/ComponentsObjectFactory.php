@@ -6,7 +6,7 @@ namespace TypeSlow\OpenApiParser\Parsing\Factories;
 
 use TypeSlow\OpenApiParser\Model\ComponentsObject;
 use TypeSlow\OpenApiParser\Model\ResponsesObject;
-use TypeSlow\OpenApiParser\Model\SchemasObject;
+use TypeSlow\OpenApiParser\Model\SchemaObjectMap;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
 final class ComponentsObjectFactory
@@ -14,7 +14,7 @@ final class ComponentsObjectFactory
     public function create(object $data, ParseContext $context): ComponentsObject
     {
         return new ComponentsObject(
-            schemas: $context->factory->create(SchemasObject::class, $data->schemas ?? null, $context),
+            schemas: $context->factory->create(SchemaObjectMap::class, $data->schemas ?? null, $context),
             responses: $context->factory->create(ResponsesObject::class, $data->responses ?? null, $context),
         );
     }

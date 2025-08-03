@@ -6,7 +6,7 @@ namespace TypeSlow\OpenApiParser\Model;
 
 use Traversable;
 
-final class SchemasObject implements MapInterface
+final class SchemaObjectMap implements MapInterface
 {
     use MapTrait;
 
