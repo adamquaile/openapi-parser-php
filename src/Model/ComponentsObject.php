@@ -8,7 +8,7 @@ final class ComponentsObject
 {
     public function __construct(
         public ?SchemaObjectMap $schemas = null,
-        public ?ResponsesObject $responses = null,
+        public ?ResponseObjectMap $responses = null,
     ) {
     }
 }
