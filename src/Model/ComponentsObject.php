@@ -16,6 +16,7 @@ final class ComponentsObject
         public ?SecuritySchemeObjectMap $securitySchemes = null,
         public ?LinkObjectMap $links = null,
         public ?CallbackObjectMap $callbacks = null,
+        public ?PathItemObjectMap $pathItems = null,
     ) {
     }
 }
