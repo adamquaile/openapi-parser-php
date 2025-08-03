@@ -9,6 +9,7 @@ final class ComponentsObject
     public function __construct(
         public ?SchemaObjectMap $schemas = null,
         public ?ResponseObjectMap $responses = null,
+        public ?ParameterObjectMap $parameters = null,
     ) {
     }
 }
