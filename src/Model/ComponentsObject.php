@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TypeSlow\OpenApiParser\Model;
 
-final class ComponentsObject
+final class ComponentsObject implements HasSpecificationExtensions
 {
     public function __construct(
         public ?SchemaObjectMap $schemas = null,
@@ -17,6 +17,7 @@ final class ComponentsObject
         public ?LinkObjectMap $links = null,
         public ?CallbackObjectMap $callbacks = null,
         public ?PathItemObjectMap $pathItems = null,
+        public object $x = new \stdClass(),
     ) {
     }
 }

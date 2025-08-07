@@ -71,7 +71,7 @@ but efforts will be focused on later versions.
 | License Object                | ✅       | [^1]  |
 | Server Object                 | ✅       |       |
 | Server Variable Object        | ✅       |       |
-| Components Object             | ❌       |       |
+| Components Object             | ✅       |       |
 | Paths Object                  | ✅       |       |
 | Path Item Object              | ✅       |       |
 | Operation Object              | ✅       |       |
