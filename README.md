@@ -65,7 +65,7 @@ but efforts will be focused on later versions.
 
 | Object                        | Support | Notes |
 |-------------------------------|---------|-------|
-| OpenAPI Object                | ❌       |       |
+| OpenAPI Object                | ✅       |       |
 | Info Object                   | ✅       |       |
 | Contact Object                | ✅       |       |
 | License Object                | ✅       | [^1]  |
