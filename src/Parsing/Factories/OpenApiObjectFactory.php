@@ -9,11 +9,14 @@ use TypeSlow\OpenApiParser\Model\ComponentsObject;
 use TypeSlow\OpenApiParser\Model\InfoObject;
 use TypeSlow\OpenApiParser\Model\OpenApiObject;
 use TypeSlow\OpenApiParser\Model\PathsObject;
-use TypeSlow\OpenApiParser\Model\ServerObject;
+use TypeSlow\OpenApiParser\Model\ServersList;
+use TypeSlow\OpenApiParser\Model\SecurityRequirementsList;
+use TypeSlow\OpenApiParser\Model\TagsList;
+use TypeSlow\OpenApiParser\Model\ExternalDocumentationObject;
 use TypeSlow\OpenApiParser\Model\Version;
 use TypeSlow\OpenApiParser\Parsing\ParseContext;
 
-final class OpenApiObjectFactory
+final class OpenApiObjectFactory implements OpenApiObjectFactoryInterface
 {
     public function create(object $data, ParseContext $context): OpenApiObject
     {
@@ -28,14 +31,13 @@ final class OpenApiObjectFactory
         return new OpenApiObject(
             openapi: $data->openapi,
             info: $info,
-            components: $context->factory->create(ComponentsObject::class, $data->components ?? null, $context),
+            jsonSchemaDialect: $data->jsonSchemaDialect ?? null,
+            servers: $context->factory->create(ServersList::class, $data->servers ?? null, $context),
             paths: $context->factory->create(PathsObject::class, $data->paths ?? null, $context),
-            servers: isset($data->servers)
-                ? array_map(
-                    fn ($server) => $context->factory->create(ServerObject::class, $server, $context),
-                    $data->servers ?? []
-                )
-                : null,
+            components: $context->factory->create(ComponentsObject::class, $data->components ?? null, $context),
+            security: $context->factory->create(SecurityRequirementsList::class, $data->security ?? null, $context),
+            tags: $context->factory->create(TagsList::class, $data->tags ?? null, $context),
+            externalDocs: $context->factory->create(ExternalDocumentationObject::class, $data->externalDocs ?? null, $context),
         );
     }
 }

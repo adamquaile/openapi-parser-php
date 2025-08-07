@@ -11,6 +11,7 @@ use TypeSlow\OpenApiParser\Model\InfoObject;
 use TypeSlow\OpenApiParser\Model\OpenApiObject;
 use TypeSlow\OpenApiParser\Model\PathsObject;
 use TypeSlow\OpenApiParser\Model\ServerObject;
+use TypeSlow\OpenApiParser\Model\ServersList;
 use TypeSlow\OpenApiParser\Model\ServerVariableObject;
 use TypeSlow\OpenApiParser\Model\ServerVariableObjectMap;
 use TypeSlow\OpenApiParser\OpenApiParser;
@@ -33,7 +34,7 @@ final class ServersFeatureTest extends TestCase
                     version: '1.0.0',
                 ),
                 paths: new PathsObject(items: (object) []),
-                servers: [
+                servers: new ServersList(items: [
                     new ServerObject(
                         url: 'http://localhost',
                         description: 'Local development server',
@@ -50,7 +51,7 @@ final class ServersFeatureTest extends TestCase
                             ]
                         )
                     ),
-                ]
+                ])
             ),
             $openapi
         );
