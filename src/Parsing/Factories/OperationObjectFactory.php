@@ -10,7 +10,7 @@ use AdamQ\OpenApiParser\Model\OperationObjectCallbacksMap;
 use AdamQ\OpenApiParser\Model\ParametersList;
 use AdamQ\OpenApiParser\Model\RequestBodyObject;
 use AdamQ\OpenApiParser\Model\ResponsesObject;
-use AdamQ\OpenApiParser\Model\SecurityRequirementObject;
+use AdamQ\OpenApiParser\Model\SecurityRequirementsList;
 use AdamQ\OpenApiParser\Model\ServersList;
 use AdamQ\OpenApiParser\Parsing\ParseContext;
 
@@ -31,7 +31,7 @@ final class OperationObjectFactory implements OperationObjectFactoryInterface
             responses: $context->factory->create(ResponsesObject::class, $data->responses ?? null, $context),
             callbacks: $context->factory->create(OperationObjectCallbacksMap::class, $data->callbacks ?? null, $context),
             deprecated: $data->deprecated ?? false,
-            security: $context->factory->create(SecurityRequirementObject::class, $data->security ?? null, $context),
+            security: $context->factory->create(SecurityRequirementsList::class, $data->security ?? null, $context),
             servers: $context->factory->create(ServersList::class, $data->servers ?? null, $context),
             x: $this->parsedExtensionObject($data),
         );

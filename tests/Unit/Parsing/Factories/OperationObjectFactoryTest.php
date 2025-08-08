@@ -19,6 +19,7 @@ use AdamQ\OpenApiParser\Model\RequestBodyObject;
 use AdamQ\OpenApiParser\Model\ResponsesObject;
 use AdamQ\OpenApiParser\Model\SchemaObject;
 use AdamQ\OpenApiParser\Model\SecurityRequirementObject;
+use AdamQ\OpenApiParser\Model\SecurityRequirementsList;
 use AdamQ\OpenApiParser\Model\ServerObject;
 use AdamQ\OpenApiParser\Model\ServersList;
 use AdamQ\OpenApiParser\Model\Version;
@@ -45,7 +46,9 @@ final class OperationObjectFactoryTest extends TestCase
                     '200' => (object) ['description' => 'Pet updated.'],
                     '405' => (object) ['description' => 'Method Not Allowed'],
                 ]),
-                SecurityRequirementObject::class => new SecurityRequirementObject(items: $data->security ?? (object) []),
+                SecurityRequirementsList::class => new SecurityRequirementsList(items: [
+                    new SecurityRequirementObject(items: (object) ['petstore_auth' => ['write:pets', 'read:pets']])
+                ]),
                 OperationObjectCallbacksMap::class => new OperationObjectCallbacksMap(items: (object) [
                     'petUpdated' => new ReferenceObject(ref: '#/components/callbacks/petUpdated'),
                 ]),
@@ -117,7 +120,9 @@ final class OperationObjectFactoryTest extends TestCase
                     '200' => (object) ['description' => 'Pet updated.'],
                     '405' => (object) ['description' => 'Method Not Allowed'],
                 ]),
-                security: new SecurityRequirementObject(items: (object) [])
+                security: new SecurityRequirementsList(items: [
+                    new SecurityRequirementObject(items: (object) ['petstore_auth' => ['write:pets', 'read:pets']])
+                ])
             ),
         ];
 
