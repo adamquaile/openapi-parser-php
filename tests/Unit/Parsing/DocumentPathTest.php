@@ -23,7 +23,7 @@ final class DocumentPathTest extends TestCase
     {
         $this->assertSame(
             '$.components',
-            (string) new DocumentPath()->append('components')
+            (string) (new DocumentPath())->append('components')
         );
     }
 }
