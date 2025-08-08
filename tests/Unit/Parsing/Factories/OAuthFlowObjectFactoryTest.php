@@ -9,6 +9,7 @@ use PHPUnit\Framework\TestCase;
 use AdamQ\OpenApiParser\Model\OAuthFlowObject;
 use AdamQ\OpenApiParser\Model\OAuthFlowScopesMap;
 use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\DocumentPath;
 use AdamQ\OpenApiParser\Parsing\Factories\OAuthFlowObjectFactory;
 use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
 use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
@@ -33,7 +34,7 @@ final class OAuthFlowObjectFactoryTest extends TestCase
                     'read:pets' => 'read your pets',
                 ],
             ],
-            'expected' => new OAuthFlowObject(
+            'expected' => OAuthFlowObject::authorizationCode(
                 authorizationUrl: 'https://example.com/api/oauth/dialog',
                 tokenUrl: 'https://example.com/api/oauth/token',
                 scopes: new OAuthFlowScopesMap(items: (object) [
@@ -41,6 +42,7 @@ final class OAuthFlowObjectFactoryTest extends TestCase
                     'read:pets' => 'read your pets',
                 ]),
             ),
+            'path' => new DocumentPath('$.flows.authorizationCode'),
         ];
     }
 }

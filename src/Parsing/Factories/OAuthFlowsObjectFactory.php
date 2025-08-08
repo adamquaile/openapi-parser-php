@@ -15,10 +15,10 @@ final class OAuthFlowsObjectFactory implements OAuthFlowsObjectFactoryInterface
     public function create(object $data, ParseContext $context): OAuthFlowsObject
     {
         return new OAuthFlowsObject(
-            implicit: $context->factory->create(OAuthFlowObject::class, $data->implicit ?? null, $context),
-            password: $context->factory->create(OAuthFlowObject::class, $data->password ?? null, $context),
-            clientCredentials: $context->factory->create(OAuthFlowObject::class, $data->clientCredentials ?? null, $context),
-            authorizationCode: $context->factory->create(OAuthFlowObject::class, $data->authorizationCode ?? null, $context),
+            implicit: $context->factory->create(OAuthFlowObject::class, $data->implicit ?? null, $context->withPath($context->path->append('implicit'))),
+            password: $context->factory->create(OAuthFlowObject::class, $data->password ?? null, $context->withPath($context->path->append('password'))),
+            clientCredentials: $context->factory->create(OAuthFlowObject::class, $data->clientCredentials ?? null, $context->withPath($context->path->append('clientCredentials'))),
+            authorizationCode: $context->factory->create(OAuthFlowObject::class, $data->authorizationCode ?? null, $context->withPath($context->path->append('authorizationCode'))),
             x: $this->parsedExtensionObject($data),
         );
     }

@@ -9,6 +9,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\DocumentPath;
 use AdamQ\OpenApiParser\Parsing\Factory;
 use AdamQ\OpenApiParser\Parsing\ParseContext;
 
@@ -53,11 +54,13 @@ trait ObjectFactoryTest
     }
 
     #[DataProvider('examples')]
-    public function testExamples(Version $version, object|string|array $data, object $expected, ?callable $assert = null): void
+    public function testExamples(Version $version, object|string|array $data, object $expected, ?callable $assert = null, ?DocumentPath $path = null): void
     {
         $factory = $this->createMock(Factory::class);
         $this->setupPreconditions($factory);
-        $actual = $this->factory->create($data, new ParseContext(version: $version, factory: $factory));
+        $documentPath = $path ?? new DocumentPath();
+        $parseContext = new ParseContext(version: $version, factory: $factory, path: $documentPath);
+        $actual = $this->factory->create($data, $parseContext);
 
         $this->assertEquals($expected, $actual);
 

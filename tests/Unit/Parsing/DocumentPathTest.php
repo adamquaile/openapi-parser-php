@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AdamQ\OpenApiParser\Tests\Parsing;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
@@ -16,6 +16,14 @@ final class DocumentPathTest extends TestCase
         $this->assertSame(
             '$',
             (string) new DocumentPath()
+        );
+    }
+
+    public function testItCanAppendPath(): void
+    {
+        $this->assertSame(
+            '$.components',
+            (string) new DocumentPath()->append('components')
         );
     }
 }
