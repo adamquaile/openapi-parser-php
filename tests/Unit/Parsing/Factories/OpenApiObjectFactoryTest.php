@@ -2,30 +2,30 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Exceptions\InvalidOpenApiDocument;
-use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
-use TypeSlow\OpenApiParser\Model\InfoObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Model\OpenApiObject;
-use TypeSlow\OpenApiParser\Model\ServersList;
-use TypeSlow\OpenApiParser\Model\ServerObject;
-use TypeSlow\OpenApiParser\Model\SecurityRequirementsList;
-use TypeSlow\OpenApiParser\Model\SecurityRequirementObject;
-use TypeSlow\OpenApiParser\Model\TagsList;
-use TypeSlow\OpenApiParser\Model\TagObject;
-use TypeSlow\OpenApiParser\Model\ExternalDocumentationObject;
-use TypeSlow\OpenApiParser\Model\ComponentsObject;
-use TypeSlow\OpenApiParser\Model\PathsObject;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Parsing\DocumentPath;
-use TypeSlow\OpenApiParser\Parsing\Factories\OpenApiObjectFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Exceptions\InvalidOpenApiDocument;
+use AdamQ\OpenApiParser\Exceptions\OpenApiValidationError;
+use AdamQ\OpenApiParser\Model\InfoObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Model\OpenApiObject;
+use AdamQ\OpenApiParser\Model\ServersList;
+use AdamQ\OpenApiParser\Model\ServerObject;
+use AdamQ\OpenApiParser\Model\SecurityRequirementsList;
+use AdamQ\OpenApiParser\Model\SecurityRequirementObject;
+use AdamQ\OpenApiParser\Model\TagsList;
+use AdamQ\OpenApiParser\Model\TagObject;
+use AdamQ\OpenApiParser\Model\ExternalDocumentationObject;
+use AdamQ\OpenApiParser\Model\ComponentsObject;
+use AdamQ\OpenApiParser\Model\PathsObject;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Parsing\DocumentPath;
+use AdamQ\OpenApiParser\Parsing\Factories\OpenApiObjectFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 #[CoversClass(OpenApiObject::class)]
 #[CoversClass(OpenApiObjectFactory::class)]

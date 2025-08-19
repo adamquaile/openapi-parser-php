@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\EncodingObject;
-use TypeSlow\OpenApiParser\Model\EncodingObjectMap;
-use TypeSlow\OpenApiParser\Model\ExamplesMap;
-use TypeSlow\OpenApiParser\Model\MediaTypeObject;
-use TypeSlow\OpenApiParser\Model\SchemaObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\EncodingObject;
+use AdamQ\OpenApiParser\Model\EncodingObjectMap;
+use AdamQ\OpenApiParser\Model\ExamplesMap;
+use AdamQ\OpenApiParser\Model\MediaTypeObject;
+use AdamQ\OpenApiParser\Model\SchemaObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class MediaTypeObjectFactory implements MediaTypeObjectFactoryInterface
 {

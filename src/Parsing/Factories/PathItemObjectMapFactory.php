@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\PathItemObject;
-use TypeSlow\OpenApiParser\Model\PathItemObjectMap;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\PathItemObject;
+use AdamQ\OpenApiParser\Model\PathItemObjectMap;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 class PathItemObjectMapFactory implements PathItemObjectMapFactoryInterface
 {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Feature;
+namespace AdamQ\OpenApiParser\Tests\Feature;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ContactObject;
-use TypeSlow\OpenApiParser\Model\InfoObject;
-use TypeSlow\OpenApiParser\Model\OpenApiObject;
-use TypeSlow\OpenApiParser\Model\PathsObject;
-use TypeSlow\OpenApiParser\Model\ServerObject;
-use TypeSlow\OpenApiParser\Model\ServersList;
-use TypeSlow\OpenApiParser\Model\ServerVariableObject;
-use TypeSlow\OpenApiParser\Model\ServerVariableObjectMap;
-use TypeSlow\OpenApiParser\OpenApiParser;
+use AdamQ\OpenApiParser\Model\ContactObject;
+use AdamQ\OpenApiParser\Model\InfoObject;
+use AdamQ\OpenApiParser\Model\OpenApiObject;
+use AdamQ\OpenApiParser\Model\PathsObject;
+use AdamQ\OpenApiParser\Model\ServerObject;
+use AdamQ\OpenApiParser\Model\ServersList;
+use AdamQ\OpenApiParser\Model\ServerVariableObject;
+use AdamQ\OpenApiParser\Model\ServerVariableObjectMap;
+use AdamQ\OpenApiParser\OpenApiParser;
 
 #[CoversClass(OpenApiParser::class)]
 final class ServersFeatureTest extends TestCase

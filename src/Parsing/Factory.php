@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing;
+namespace AdamQ\OpenApiParser\Parsing;
 
 use Psr\Container\ContainerInterface;
-use TypeSlow\OpenApiParser\Exceptions\InvalidOpenApiDocument;
-use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
-use TypeSlow\OpenApiParser\Model\ComponentsObject;
-use TypeSlow\OpenApiParser\Model\InfoObject;
-use TypeSlow\OpenApiParser\Model\OpenApiObject;
-use TypeSlow\OpenApiParser\Parsing\Factories\ComponentsObjectFactoryInterface;
-use TypeSlow\OpenApiParser\Parsing\Factories\InfoObjectFactoryInterface;
-use TypeSlow\OpenApiParser\Parsing\Factories\OpenApiObjectFactoryInterface;
+use AdamQ\OpenApiParser\Exceptions\InvalidOpenApiDocument;
+use AdamQ\OpenApiParser\Exceptions\OpenApiValidationError;
+use AdamQ\OpenApiParser\Model\ComponentsObject;
+use AdamQ\OpenApiParser\Model\InfoObject;
+use AdamQ\OpenApiParser\Model\OpenApiObject;
+use AdamQ\OpenApiParser\Parsing\Factories\ComponentsObjectFactoryInterface;
+use AdamQ\OpenApiParser\Parsing\Factories\InfoObjectFactoryInterface;
+use AdamQ\OpenApiParser\Parsing\Factories\OpenApiObjectFactoryInterface;
 
 readonly class Factory
 {
@@ -34,7 +34,7 @@ readonly class Factory
         }
 
         $short = (new \ReflectionClass($object))->getShortName();
-        $defaultFactoryInterface = 'TypeSlow\\OpenApiParser\\Parsing\\Factories\\' . $short . 'FactoryInterface';
+        $defaultFactoryInterface = 'AdamQ\\OpenApiParser\\Parsing\\Factories\\' . $short . 'FactoryInterface';
 
         $factory = $this->container->get($defaultFactoryInterface);
 

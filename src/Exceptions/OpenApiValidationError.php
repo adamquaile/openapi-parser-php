@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Exceptions;
+namespace AdamQ\OpenApiParser\Exceptions;
 
-use TypeSlow\OpenApiParser\Parsing\DocumentPath;
+use AdamQ\OpenApiParser\Parsing\DocumentPath;
 
 final class OpenApiValidationError extends \Exception
 {

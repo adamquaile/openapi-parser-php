@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser;
+namespace AdamQ\OpenApiParser;
 
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Yaml\Yaml;
-use TypeSlow\OpenApiParser\Exceptions\InvalidOpenApiDocument;
-use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
-use TypeSlow\OpenApiParser\Model\OpenApiObject;
-use TypeSlow\OpenApiParser\Model\InfoObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\DocumentPath;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Exceptions\InvalidOpenApiDocument;
+use AdamQ\OpenApiParser\Exceptions\OpenApiValidationError;
+use AdamQ\OpenApiParser\Model\OpenApiObject;
+use AdamQ\OpenApiParser\Model\InfoObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\DocumentPath;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final readonly class OpenApiParser
 {

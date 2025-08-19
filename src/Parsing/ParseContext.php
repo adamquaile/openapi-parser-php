@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing;
+namespace AdamQ\OpenApiParser\Parsing;
 
-use TypeSlow\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Model\Version;
 
 final readonly class ParseContext
 {

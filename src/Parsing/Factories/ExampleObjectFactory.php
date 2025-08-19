@@ -1,9 +1,9 @@
 <?php
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\ExampleObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\ExampleObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class ExampleObjectFactory implements ExampleObjectFactoryInterface
 {

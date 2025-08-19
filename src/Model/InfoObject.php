@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Model;
+namespace AdamQ\OpenApiParser\Model;
 
 final readonly class InfoObject implements HasSpecificationExtensions
 {

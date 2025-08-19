@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\CallbackObjectMap;
-use TypeSlow\OpenApiParser\Model\ComponentsObject;
-use TypeSlow\OpenApiParser\Model\ExampleObjectMap;
-use TypeSlow\OpenApiParser\Model\HeaderObjectMap;
-use TypeSlow\OpenApiParser\Model\LinkObjectMap;
-use TypeSlow\OpenApiParser\Model\ParameterObjectMap;
-use TypeSlow\OpenApiParser\Model\PathItemObjectMap;
-use TypeSlow\OpenApiParser\Model\RequestBodyObjectMap;
-use TypeSlow\OpenApiParser\Model\ResponseObjectMap;
-use TypeSlow\OpenApiParser\Model\SchemaObjectMap;
-use TypeSlow\OpenApiParser\Model\SecuritySchemeObjectMap;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\CallbackObjectMap;
+use AdamQ\OpenApiParser\Model\ComponentsObject;
+use AdamQ\OpenApiParser\Model\ExampleObjectMap;
+use AdamQ\OpenApiParser\Model\HeaderObjectMap;
+use AdamQ\OpenApiParser\Model\LinkObjectMap;
+use AdamQ\OpenApiParser\Model\ParameterObjectMap;
+use AdamQ\OpenApiParser\Model\PathItemObjectMap;
+use AdamQ\OpenApiParser\Model\RequestBodyObjectMap;
+use AdamQ\OpenApiParser\Model\ResponseObjectMap;
+use AdamQ\OpenApiParser\Model\SchemaObjectMap;
+use AdamQ\OpenApiParser\Model\SecuritySchemeObjectMap;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class ComponentsObjectFactory implements ComponentsObjectFactoryInterface
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Exceptions;
+namespace AdamQ\OpenApiParser\Exceptions;
 
 use Exception;
 
