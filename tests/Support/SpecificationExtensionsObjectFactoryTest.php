@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Support;
+namespace AdamQ\OpenApiParser\Tests\Support;
 
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\HasSpecificationExtensions;
+use AdamQ\OpenApiParser\Model\HasSpecificationExtensions;
 
 /**
  * @mixin TestCase
@@ -18,7 +18,7 @@ trait SpecificationExtensionsObjectFactoryTest
     {
         $factoryTestClass = (new \ReflectionClass(static::class))->getShortName();
         self::assertStringEndsWith('FactoryTest', $factoryTestClass);
-        $objectClass = '\\TypeSlow\\OpenApiParser\\Model\\' . substr($factoryTestClass, 0, -11);
+        $objectClass = '\\AdamQ\\OpenApiParser\\Model\\' . substr($factoryTestClass, 0, -11);
 
         $this->assertTrue(
             is_a($objectClass, HasSpecificationExtensions::class, allow_string: true),

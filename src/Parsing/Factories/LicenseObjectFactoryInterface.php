@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\LicenseObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\LicenseObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 interface LicenseObjectFactoryInterface
 {

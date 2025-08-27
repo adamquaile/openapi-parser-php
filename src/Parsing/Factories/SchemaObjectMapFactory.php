@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\SchemaObject;
-use TypeSlow\OpenApiParser\Model\SchemaObjectMap;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\SchemaObject;
+use AdamQ\OpenApiParser\Model\SchemaObjectMap;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 class SchemaObjectMapFactory implements SchemaObjectMapFactoryInterface
 {

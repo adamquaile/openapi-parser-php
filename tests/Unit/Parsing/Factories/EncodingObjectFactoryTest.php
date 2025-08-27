@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\EncodingObject;
-use TypeSlow\OpenApiParser\Model\HeaderObject;
-use TypeSlow\OpenApiParser\Model\ExamplesMap;
-use TypeSlow\OpenApiParser\Model\HeaderObjectMap;
-use TypeSlow\OpenApiParser\Model\MediaTypeObject;
-use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
-use TypeSlow\OpenApiParser\Model\SchemaObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\EncodingObjectFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\EncodingObject;
+use AdamQ\OpenApiParser\Model\HeaderObject;
+use AdamQ\OpenApiParser\Model\ExamplesMap;
+use AdamQ\OpenApiParser\Model\HeaderObjectMap;
+use AdamQ\OpenApiParser\Model\MediaTypeObject;
+use AdamQ\OpenApiParser\Model\MediaTypeObjectMap;
+use AdamQ\OpenApiParser\Model\SchemaObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\EncodingObjectFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(EncodingObject::class)]
 #[CoversClass(EncodingObjectFactory::class)]

@@ -2,27 +2,27 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\CallbackObjectMap;
-use TypeSlow\OpenApiParser\Model\ComponentsObject;
-use TypeSlow\OpenApiParser\Model\ExampleObjectMap;
-use TypeSlow\OpenApiParser\Model\HeaderObjectMap;
-use TypeSlow\OpenApiParser\Model\LinkObjectMap;
-use TypeSlow\OpenApiParser\Model\ParameterObjectMap;
-use TypeSlow\OpenApiParser\Model\PathItemObjectMap;
-use TypeSlow\OpenApiParser\Model\RequestBodyObjectMap;
-use TypeSlow\OpenApiParser\Model\ResponseObjectMap;
-use TypeSlow\OpenApiParser\Model\SchemaObjectMap;
-use TypeSlow\OpenApiParser\Model\SecuritySchemeObjectMap;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\ComponentsObjectFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\CallbackObjectMap;
+use AdamQ\OpenApiParser\Model\ComponentsObject;
+use AdamQ\OpenApiParser\Model\ExampleObjectMap;
+use AdamQ\OpenApiParser\Model\HeaderObjectMap;
+use AdamQ\OpenApiParser\Model\LinkObjectMap;
+use AdamQ\OpenApiParser\Model\ParameterObjectMap;
+use AdamQ\OpenApiParser\Model\PathItemObjectMap;
+use AdamQ\OpenApiParser\Model\RequestBodyObjectMap;
+use AdamQ\OpenApiParser\Model\ResponseObjectMap;
+use AdamQ\OpenApiParser\Model\SchemaObjectMap;
+use AdamQ\OpenApiParser\Model\SecuritySchemeObjectMap;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\ComponentsObjectFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(ComponentsObject::class)]
 #[CoversClass(ComponentsObjectFactory::class)]

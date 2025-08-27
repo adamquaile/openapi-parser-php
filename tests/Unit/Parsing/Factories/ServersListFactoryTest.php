@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ServerObject;
-use TypeSlow\OpenApiParser\Model\ServersList;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\ServersListFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\ServerObject;
+use AdamQ\OpenApiParser\Model\ServersList;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\ServersListFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
 
 #[CoversClass(ServersList::class)]
 #[CoversClass(ServersListFactory::class)]

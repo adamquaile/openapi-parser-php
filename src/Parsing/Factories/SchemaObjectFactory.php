@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\DiscriminatorObject;
-use TypeSlow\OpenApiParser\Model\ExternalDocumentationObject;
-use TypeSlow\OpenApiParser\Model\SchemaObject;
-use TypeSlow\OpenApiParser\Model\XmlObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\DiscriminatorObject;
+use AdamQ\OpenApiParser\Model\ExternalDocumentationObject;
+use AdamQ\OpenApiParser\Model\SchemaObject;
+use AdamQ\OpenApiParser\Model\XmlObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class SchemaObjectFactory implements SchemaObjectFactoryInterface
 {

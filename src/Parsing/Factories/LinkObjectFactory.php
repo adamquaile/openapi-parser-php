@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\LinkObject;
-use TypeSlow\OpenApiParser\Model\LinkObjectParametersMap;
-use TypeSlow\OpenApiParser\Model\RuntimeExpression;
-use TypeSlow\OpenApiParser\Model\ServerObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\LinkObject;
+use AdamQ\OpenApiParser\Model\LinkObjectParametersMap;
+use AdamQ\OpenApiParser\Model\RuntimeExpression;
+use AdamQ\OpenApiParser\Model\ServerObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class LinkObjectFactory implements LinkObjectFactoryInterface
 {

@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ExampleObject;
-use TypeSlow\OpenApiParser\Model\OAuthFlowsObject;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Model\SecuritySchemeObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\SecuritySchemeObjectFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\ExampleObject;
+use AdamQ\OpenApiParser\Model\OAuthFlowsObject;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Model\SecuritySchemeObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\SecuritySchemeObjectFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(SecuritySchemeObject::class)]
 #[CoversClass(SecuritySchemeObjectFactory::class)]

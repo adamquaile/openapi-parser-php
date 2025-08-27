@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\ContactObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\ContactObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class ContactObjectFactory implements ContactObjectFactoryInterface
 {

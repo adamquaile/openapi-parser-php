@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\ReferenceObjectFactory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\ReferenceObjectFactory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
 
 #[CoversClass(ReferenceObject::class)]
 #[CoversClass(ReferenceObjectFactory::class)]

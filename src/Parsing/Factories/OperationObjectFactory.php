@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\ExternalDocumentationObject;
-use TypeSlow\OpenApiParser\Model\OperationObject;
-use TypeSlow\OpenApiParser\Model\OperationObjectCallbacksMap;
-use TypeSlow\OpenApiParser\Model\ParametersList;
-use TypeSlow\OpenApiParser\Model\RequestBodyObject;
-use TypeSlow\OpenApiParser\Model\ResponsesObject;
-use TypeSlow\OpenApiParser\Model\SecurityRequirementObject;
-use TypeSlow\OpenApiParser\Model\ServersList;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\ExternalDocumentationObject;
+use AdamQ\OpenApiParser\Model\OperationObject;
+use AdamQ\OpenApiParser\Model\OperationObjectCallbacksMap;
+use AdamQ\OpenApiParser\Model\ParametersList;
+use AdamQ\OpenApiParser\Model\RequestBodyObject;
+use AdamQ\OpenApiParser\Model\ResponsesObject;
+use AdamQ\OpenApiParser\Model\SecurityRequirementObject;
+use AdamQ\OpenApiParser\Model\ServersList;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class OperationObjectFactory implements OperationObjectFactoryInterface
 {

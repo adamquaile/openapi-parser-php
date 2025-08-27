@@ -2,30 +2,30 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ExamplesMap;
-use TypeSlow\OpenApiParser\Model\MediaTypeObject;
-use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
-use TypeSlow\OpenApiParser\Model\OAuthFlowObject;
-use TypeSlow\OpenApiParser\Model\OperationObject;
-use TypeSlow\OpenApiParser\Model\OperationObjectCallbacksMap;
-use TypeSlow\OpenApiParser\Model\ParametersList;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Model\RequestBodyObject;
-use TypeSlow\OpenApiParser\Model\ResponsesObject;
-use TypeSlow\OpenApiParser\Model\SchemaObject;
-use TypeSlow\OpenApiParser\Model\SecurityRequirementObject;
-use TypeSlow\OpenApiParser\Model\ServerObject;
-use TypeSlow\OpenApiParser\Model\ServersList;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\OperationObjectFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\ExamplesMap;
+use AdamQ\OpenApiParser\Model\MediaTypeObject;
+use AdamQ\OpenApiParser\Model\MediaTypeObjectMap;
+use AdamQ\OpenApiParser\Model\OAuthFlowObject;
+use AdamQ\OpenApiParser\Model\OperationObject;
+use AdamQ\OpenApiParser\Model\OperationObjectCallbacksMap;
+use AdamQ\OpenApiParser\Model\ParametersList;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Model\RequestBodyObject;
+use AdamQ\OpenApiParser\Model\ResponsesObject;
+use AdamQ\OpenApiParser\Model\SchemaObject;
+use AdamQ\OpenApiParser\Model\SecurityRequirementObject;
+use AdamQ\OpenApiParser\Model\ServerObject;
+use AdamQ\OpenApiParser\Model\ServersList;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\OperationObjectFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(OperationObject::class)]
 #[CoversClass(OperationObjectFactory::class)]

@@ -7,7 +7,7 @@ For now, it's strict and is not intended to support invalid specification files.
 ## Installation
 
 ```bash
-composer require typeslow/openapi-parser
+composer require adamquaile/openapi-parser
 ```
 
 ### Usage
@@ -17,7 +17,7 @@ Here's an example usage of the library. Check [./tests/Feature](./tests/Feature)
 ```php
 <?php
 
-use TypeSlow\OpenApiParser\OpenApiParser;
+use AdamQ\OpenApiParser\OpenApiParser;
 
 $openapiParser = new OpenApiParser();
 $openapi = $openapiParser->parseYamlString(

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\OAuthFlowObject;
-use TypeSlow\OpenApiParser\Model\OAuthFlowScopesMap;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\OAuthFlowObjectFactory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\OAuthFlowObject;
+use AdamQ\OpenApiParser\Model\OAuthFlowScopesMap;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\OAuthFlowObjectFactory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(OAuthFlowObjectFactory::class)]
 #[CoversClass(OAuthFlowObject::class)]

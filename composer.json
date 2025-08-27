@@ -1,14 +1,14 @@
 {
-    "name": "typeslowinc/openapi-parser",
+    "name": "adamquaile/openapi-parser",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "TypeSlow\\OpenApiParser\\": "src/"
+            "AdamQ\\OpenApiParser\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TypeSlow\\OpenApiParser\\Tests\\": "tests/"
+            "AdamQ\\OpenApiParser\\Tests\\": "tests/"
         }
     },
     "authors": [

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\SecuritySchemeObject;
-use TypeSlow\OpenApiParser\Model\SecuritySchemeObjectMap;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\SecuritySchemeObject;
+use AdamQ\OpenApiParser\Model\SecuritySchemeObjectMap;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class SecuritySchemeObjectMapFactory implements SecuritySchemeObjectMapFactoryInterface
 {

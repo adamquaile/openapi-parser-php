@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\MapTrait;
-use TypeSlow\OpenApiParser\Model\ServerVariableObject;
-use TypeSlow\OpenApiParser\Model\ServerVariableObjectMap;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\MapTrait;
+use AdamQ\OpenApiParser\Model\ServerVariableObject;
+use AdamQ\OpenApiParser\Model\ServerVariableObjectMap;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class ServerVariableObjectMapFactory implements ServerVariableObjectMapFactoryInterface
 {

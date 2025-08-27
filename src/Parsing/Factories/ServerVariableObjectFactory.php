@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\ServerVariableObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\ServerVariableObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class ServerVariableObjectFactory implements ServerVariableObjectFactoryInterface
 {

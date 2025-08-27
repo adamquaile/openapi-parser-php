@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\CallbackObject;
-use TypeSlow\OpenApiParser\Model\MediaTypeObject;
-use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
-use TypeSlow\OpenApiParser\Model\OperationObject;
-use TypeSlow\OpenApiParser\Model\PathItemObject;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Model\RequestBodyObject;
-use TypeSlow\OpenApiParser\Model\ResponsesObject;
-use TypeSlow\OpenApiParser\Model\SchemaObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\CallbackObjectFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\CallbackObject;
+use AdamQ\OpenApiParser\Model\MediaTypeObject;
+use AdamQ\OpenApiParser\Model\MediaTypeObjectMap;
+use AdamQ\OpenApiParser\Model\OperationObject;
+use AdamQ\OpenApiParser\Model\PathItemObject;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Model\RequestBodyObject;
+use AdamQ\OpenApiParser\Model\ResponsesObject;
+use AdamQ\OpenApiParser\Model\SchemaObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\CallbackObjectFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(CallbackObject::class)]
 #[CoversClass(CallbackObjectFactory::class)]

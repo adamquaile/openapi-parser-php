@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\CallbackObject;
-use TypeSlow\OpenApiParser\Model\CallbackObjectMap;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\CallbackObject;
+use AdamQ\OpenApiParser\Model\CallbackObjectMap;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class CallbackObjectMapFactory implements CallbackObjectMapFactoryInterface
 {

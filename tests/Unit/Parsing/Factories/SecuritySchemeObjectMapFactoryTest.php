@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\SecuritySchemeObject;
-use TypeSlow\OpenApiParser\Model\SecuritySchemeObjectMap;
-use TypeSlow\OpenApiParser\Model\MapInterface;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\SecuritySchemeObjectMapFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\MapObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\SecuritySchemeObject;
+use AdamQ\OpenApiParser\Model\SecuritySchemeObjectMap;
+use AdamQ\OpenApiParser\Model\MapInterface;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\SecuritySchemeObjectMapFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\MapObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
 
 #[CoversClass(SecuritySchemeObjectMap::class)]
 #[CoversClass(SecuritySchemeObjectMapFactory::class)]

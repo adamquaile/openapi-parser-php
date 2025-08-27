@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\LinkObject;
-use TypeSlow\OpenApiParser\Model\LinkObjectMap;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\LinkObject;
+use AdamQ\OpenApiParser\Model\LinkObjectMap;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class LinkObjectMapFactory implements LinkObjectMapFactoryInterface
 {

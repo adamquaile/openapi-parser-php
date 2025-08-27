@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Exceptions\OpenApiValidationError;
-use TypeSlow\OpenApiParser\Model\ComponentsObject;
-use TypeSlow\OpenApiParser\Model\InfoObject;
-use TypeSlow\OpenApiParser\Model\OpenApiObject;
-use TypeSlow\OpenApiParser\Model\PathsObject;
-use TypeSlow\OpenApiParser\Model\ServersList;
-use TypeSlow\OpenApiParser\Model\SecurityRequirementsList;
-use TypeSlow\OpenApiParser\Model\TagsList;
-use TypeSlow\OpenApiParser\Model\ExternalDocumentationObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Exceptions\OpenApiValidationError;
+use AdamQ\OpenApiParser\Model\ComponentsObject;
+use AdamQ\OpenApiParser\Model\InfoObject;
+use AdamQ\OpenApiParser\Model\OpenApiObject;
+use AdamQ\OpenApiParser\Model\PathsObject;
+use AdamQ\OpenApiParser\Model\ServersList;
+use AdamQ\OpenApiParser\Model\SecurityRequirementsList;
+use AdamQ\OpenApiParser\Model\TagsList;
+use AdamQ\OpenApiParser\Model\ExternalDocumentationObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class OpenApiObjectFactory implements OpenApiObjectFactoryInterface
 {

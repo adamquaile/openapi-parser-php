@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\HeaderObjectMap;
-use TypeSlow\OpenApiParser\Model\LinkObjectMap;
-use TypeSlow\OpenApiParser\Model\MediaTypeObjectMap;
-use TypeSlow\OpenApiParser\Model\ResponseObject;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\ResponseObjectFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\HeaderObjectMap;
+use AdamQ\OpenApiParser\Model\LinkObjectMap;
+use AdamQ\OpenApiParser\Model\MediaTypeObjectMap;
+use AdamQ\OpenApiParser\Model\ResponseObject;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\ResponseObjectFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\SpecificationExtensionsObjectFactoryTest;
 
 #[CoversClass(ResponseObject::class)]
 #[CoversClass(ResponseObjectFactory::class)]

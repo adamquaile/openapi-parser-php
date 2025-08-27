@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Model\ResponseObject;
-use TypeSlow\OpenApiParser\Model\ResponseObjectMap;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Model\ResponseObject;
+use AdamQ\OpenApiParser\Model\ResponseObjectMap;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class ResponseObjectMapFactory implements ResponseObjectMapFactoryInterface
 {

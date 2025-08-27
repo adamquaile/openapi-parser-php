@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\ExampleObject;
-use TypeSlow\OpenApiParser\Model\ExamplesMap;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\ExampleObject;
+use AdamQ\OpenApiParser\Model\ExamplesMap;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class ExamplesMapFactory implements ExamplesMapFactoryInterface
 {

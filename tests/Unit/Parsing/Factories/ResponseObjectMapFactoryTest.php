@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Unit\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Tests\Unit\Parsing\Factories;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ReferenceObject;
-use TypeSlow\OpenApiParser\Model\ResponseObject;
-use TypeSlow\OpenApiParser\Model\ResponseObjectMap;
-use TypeSlow\OpenApiParser\Model\Version;
-use TypeSlow\OpenApiParser\Parsing\Factories\ResponseObjectMapFactory;
-use TypeSlow\OpenApiParser\Parsing\Factory;
-use TypeSlow\OpenApiParser\Tests\Support\MapObjectFactoryTest;
-use TypeSlow\OpenApiParser\Tests\Support\ObjectFactoryTest;
+use AdamQ\OpenApiParser\Model\ReferenceObject;
+use AdamQ\OpenApiParser\Model\ResponseObject;
+use AdamQ\OpenApiParser\Model\ResponseObjectMap;
+use AdamQ\OpenApiParser\Model\Version;
+use AdamQ\OpenApiParser\Parsing\Factories\ResponseObjectMapFactory;
+use AdamQ\OpenApiParser\Parsing\Factory;
+use AdamQ\OpenApiParser\Tests\Support\MapObjectFactoryTest;
+use AdamQ\OpenApiParser\Tests\Support\ObjectFactoryTest;
 
 #[CoversClass(ResponseObjectMap::class)]
 #[CoversClass(ResponseObjectMapFactory::class)]

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
-use TypeSlow\OpenApiParser\Model\PathItemObject;
-use TypeSlow\OpenApiParser\Model\PathsObject;
-use TypeSlow\OpenApiParser\Model\ResponseObject;
-use TypeSlow\OpenApiParser\Model\ResponsesObject;
-use TypeSlow\OpenApiParser\Parsing\ParseContext;
+use AdamQ\OpenApiParser\Model\PathItemObject;
+use AdamQ\OpenApiParser\Model\PathsObject;
+use AdamQ\OpenApiParser\Model\ResponseObject;
+use AdamQ\OpenApiParser\Model\ResponsesObject;
+use AdamQ\OpenApiParser\Parsing\ParseContext;
 
 final class PathsObjectFactory implements PathsObjectFactoryInterface
 {

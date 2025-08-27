@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Parsing\Factories;
+namespace AdamQ\OpenApiParser\Parsing\Factories;
 
 trait SpecificationExtensionFactoryTrait
 {

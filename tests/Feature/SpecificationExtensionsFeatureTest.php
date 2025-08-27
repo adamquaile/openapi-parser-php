@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace TypeSlow\OpenApiParser\Tests\Feature;
+namespace AdamQ\OpenApiParser\Tests\Feature;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use TypeSlow\OpenApiParser\Model\ContactObject;
-use TypeSlow\OpenApiParser\Model\InfoObject;
-use TypeSlow\OpenApiParser\Model\OpenApiObject;
-use TypeSlow\OpenApiParser\Model\PathsObject;
-use TypeSlow\OpenApiParser\OpenApiParser;
+use AdamQ\OpenApiParser\Model\ContactObject;
+use AdamQ\OpenApiParser\Model\InfoObject;
+use AdamQ\OpenApiParser\Model\OpenApiObject;
+use AdamQ\OpenApiParser\Model\PathsObject;
+use AdamQ\OpenApiParser\OpenApiParser;
 
 #[CoversClass(OpenApiParser::class)]
 final class SpecificationExtensionsFeatureTest extends TestCase
