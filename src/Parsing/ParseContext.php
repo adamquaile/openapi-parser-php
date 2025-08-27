@@ -14,4 +14,13 @@ final readonly class ParseContext
         public DocumentPath $path = new DocumentPath(),
     ) {
     }
+
+    public function withPath(DocumentPath $path): self
+    {
+        return new self(
+            version: $this->version,
+            factory: $this->factory,
+            path: $path,
+        );
+    }
 }

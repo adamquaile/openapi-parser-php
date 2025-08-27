@@ -14,12 +14,37 @@ final class OAuthFlowObjectFactory implements OAuthFlowObjectFactoryInterface
 
     public function create(object $data, ParseContext $context): OAuthFlowObject
     {
-        return new OAuthFlowObject(
-            authorizationUrl: $data->authorizationUrl,
-            tokenUrl: $data->tokenUrl,
-            scopes: new OAuthFlowScopesMap(items: $data->scopes),
-            refreshUrl: $data->refreshUrl ?? null,
-            x: $this->parsedExtensionObject($data),
-        );
+        $scopes = new OAuthFlowScopesMap(items: $data->scopes);
+        $refreshUrl = $data->refreshUrl ?? null;
+        $x = $this->parsedExtensionObject($data);
+
+        return match (true) {
+            str_ends_with((string) $context->path, '.implicit') => OAuthFlowObject::implicit(
+                authorizationUrl: $data->authorizationUrl,
+                scopes: $scopes,
+                refreshUrl: $refreshUrl,
+                x: $x,
+            ),
+            str_ends_with((string) $context->path, '.password') => OAuthFlowObject::password(
+                tokenUrl: $data->tokenUrl,
+                scopes: $scopes,
+                refreshUrl: $refreshUrl,
+                x: $x,
+            ),
+            str_ends_with((string) $context->path, '.clientCredentials') => OAuthFlowObject::clientCredentials(
+                tokenUrl: $data->tokenUrl,
+                scopes: $scopes,
+                refreshUrl: $refreshUrl,
+                x: $x,
+            ),
+            str_ends_with((string) $context->path, '.authorizationCode') => OAuthFlowObject::authorizationCode(
+                authorizationUrl: $data->authorizationUrl,
+                tokenUrl: $data->tokenUrl,
+                scopes: $scopes,
+                refreshUrl: $refreshUrl,
+                x: $x,
+            ),
+            default => throw new \InvalidArgumentException('Unable to determine OAuth flow type'),
+        };
     }
 }
